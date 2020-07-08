@@ -143,6 +143,8 @@ add_action( 'widgets_init', 'lantern_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lantern_scripts() {
+	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Source+Sans+Pro&display=swap', array(), '1.0', 'all');
+	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/lantern.css', array(), '1.0', 'all');
 	wp_enqueue_style( 'lantern-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'lantern-style', 'rtl', 'replace' );
 
