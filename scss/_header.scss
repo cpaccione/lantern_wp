@@ -1,0 +1,168 @@
+.site-header {
+    max-width: 1162px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    padding: 0 1rem 0 1rem;
+
+    #site-navigation {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        @media (min-width: 1060px) {
+            align-self: center;
+        }
+
+        a {
+            transition: .2s ease-in-out;
+
+            &:hover {
+                color: $light-blue;
+                transition: .2s ease-in-out;
+            }
+        }
+
+        .fa-search {
+            display: none;
+
+            @media (min-width: 1060px) {
+                position: absolute;
+                right: 20px;
+                top: 5px;
+            }
+        }
+
+        .current_page_item {
+            a {
+                color: $light-blue;
+            }
+        }
+    }
+
+    #primary-menu {
+        display: none;
+
+        @media (min-width: 1060px) {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 1rem;
+        }
+
+        li {
+            a {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                color: $lantern-black;
+            }
+        }
+    }
+}
+
+
+// Lantern Mobile Menu Styles
+
+//Setting up variables
+$body-bg: #303F9F;
+$main-color: #F2F2F2;
+$spin: rotate(135deg);
+$reverse-spin: rotate(-135deg);
+$default-spin: rotate(0deg);
+$duration: .25s;
+$type: ease-in-out;
+$sidebar-color: #263238;
+$black: #222;
+
+// Midtown Mobile Menu
+.midtown-mobile-menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display:  inline-block;
+	width: 36px;
+	height: 30px;
+	margin: 25px;
+	cursor: pointer;
+	transform: $default-spin;
+	transition: $duration * 2 $type;
+
+
+	@media(min-width: 1060px) {
+		display: none;
+	}
+
+}
+// .midtown-mobile-menu span {
+// 	margin: 0 auto;
+// 	position: relative;
+// 	top: 12px;
+// }
+// .midtown-mobile-menu span:before, .midtown-mobile-menu span:after {
+// 	position: absolute;
+// 	content: '';
+// }
+// .midtown-mobile-menu span, .midtown-mobile-menu span:before, .midtown-mobile-menu span:after {
+// 	width: 30px;
+// 	height: 2px;
+// 	background-color: $white;
+// 	display: block;
+// }
+// .midtown-mobile-menu span:before {
+// 	margin-top: -10px;
+// }
+// .midtown-mobile-menu span:after {
+// 	margin-top: 10px;
+// }
+
+.midtown-mobile-menu-show {
+	display: block !important;
+}
+
+// .midtown-mobile-menu {
+
+// }
+
+//Neat trick to draw the menu lines. Spans with display:block/height and poof!
+.midtown-mobile-menu span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: $dark-blue;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: $default-spin;
+  transition: $duration $type;
+}
+
+//Align spans to be below each other
+.midtown-mobile-menu span:nth-child(1) {
+  top: 0px;
+}
+
+.midtown-mobile-menu span:nth-child(2) {
+  top: 9px;
+}
+
+.midtown-mobile-menu span:nth-child(3) {
+  top: 18px;
+}
+
+//On click (see JS/jQuery) rotate 1st and 3rd span 135/-135 degrees in order to draw an X symbol. You can achieve the same result with -45/45 degrees, but this is more catchy for the user.
+.midtown-mobile-menu.open span:nth-child(1) {
+  top: 9px;
+  transform: $spin;
+}
+
+//We only need 2 span lines for the X, so we just gonna throw the middle line away.
+.midtown-mobile-menu.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.midtown-mobile-menu.open span:nth-child(3) {
+  top: 9px;
+  transform: $reverse-spin;
+}

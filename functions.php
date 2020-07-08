@@ -144,11 +144,15 @@ add_action( 'widgets_init', 'lantern_widgets_init' );
  */
 function lantern_scripts() {
 	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Source+Sans+Pro&display=swap', array(), '1.0', 'all');
-	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/lantern.css', array(), '1.0', 'all');
+
 	wp_enqueue_style( 'lantern-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'lantern-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'lantern-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.13.1/css/all.css', array(), '1.0', 'all');
+
+	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/lantern.css', array(), '1.1', 'all');
+
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
