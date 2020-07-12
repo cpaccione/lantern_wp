@@ -45,14 +45,13 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+		<div class="midtown-mobile-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
 		<nav id="site-navigation" class="main-navigation">
-
-			<div class="midtown-mobile-menu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-
 			<?php
 			wp_nav_menu(
 				array(

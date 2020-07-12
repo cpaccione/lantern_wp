@@ -7,12 +7,21 @@
     padding: 0 1rem 0 1rem;
 
     #site-navigation {
-        display: flex;
-        flex-direction: column;
-        position: relative;
+      // display: none;
+      position: absolute;
+      background-color: rgba(255, 255, 255, .9);
+      // color: white;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
 
         @media (min-width: 1060px) {
+            display: flex;
+            flex-direction: column;
+            position: relative;
             align-self: center;
+            left: initial;
         }
 
         a {
@@ -42,7 +51,10 @@
     }
 
     #primary-menu {
-        display: none;
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
         @media (min-width: 1060px) {
             display: flex;
@@ -55,14 +67,19 @@
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 700;
                 color: $lantern-black;
+                text-decoration: none;
             }
         }
     }
 }
 
-.primary-menu-show {
-  display: inline-block !important;
-}
+// div {
+//   width: 100px;
+//   height: 100px;
+//   background-color: red;
+//   animation-name: example;
+//   animation-duration: 4s;
+// }
 
 
 // Lantern Mobile Menu Styles
@@ -80,6 +97,7 @@ $black: #222;
 
 // Midtown Mobile Menu
 .midtown-mobile-menu {
+  z-index: 100;
 	position: absolute;
 	top: 0;
 	right: 0;
