@@ -8,3 +8,9 @@ body {
     font-family: 'Source Sans Pro', sans-serif;  
     -webkit-font-smoothing: antialiased;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem 0 1rem;
+}

@@ -1,0 +1,31 @@
+.home-hero {
+    margin-top: 4rem;
+
+    .home-hero-grid {
+
+        @media (min-width: 992px) {
+            display: grid;
+            grid-gap: 5rem;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        h1 {
+            color: $light-blue;
+            line-height: 1.3;
+            font-size: 1.875rem;
+        }
+
+        p {
+            font-size: 1.3125rem;
+            color: $grey;
+        }
+    }
+}
+
+.new-releases {
+    h2 {
+        font-size: 1.875rem;
+        color: $grey;
+        text-transform: uppercase;
+    }
+}
