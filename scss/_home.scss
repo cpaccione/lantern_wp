@@ -23,9 +23,48 @@
 }
 
 .new-releases {
+
+    .section-title {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
     h2 {
         font-size: 1.875rem;
         color: $grey;
         text-transform: uppercase;
+        text-align: center;
+        border-bottom: 8px solid $light-blue;
+    }
+
+    .new-release-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .book-wrap {
+            margin: 0 auto;
+            text-align: center;
+
+            @media(min-width: 992px) {
+                max-width: 266px;
+            }
+        }
+
+        .book-title {
+            font-size: 1.625rem;
+            text-decoration: none;
+            color: $dark-blue;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.19;
+        }
     }
 }

@@ -145,6 +145,8 @@ add_action( 'widgets_init', 'lantern_widgets_init' );
 function lantern_scripts() {
 	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Source+Sans+Pro&display=swap', array(), '1.0', 'all');
 
+	wp_enqueue_style( 'font-source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap', array(), '1.0', 'all');
+
 	wp_enqueue_style( 'lantern-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'lantern-style', 'rtl', 'replace' );
 
@@ -187,3 +189,39 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+	// Custom Post Book
+	function lantern_books() {
+
+		$labels = array(
+		'name' => _x('Books', 'plural'),
+		'singular_name' => _x('Book', 'singular'),
+		'menu_name' => _x('Books', 'admin menu'),
+		'name_admin_bar' => _x('Book', 'admin bar'),
+		'add_new' => _x('Add New ', 'add new'),
+		'add_new_item' => __('Add New Book'),
+		'new_item' => __('New Book'),
+		'edit_item' => __('Edit Book'),
+		'view_item' => __('View Book'),
+		'all_items' => __('All Books'),
+		'search_items' => __('Search Books'),
+		'not_found' => __('No Book found.'),
+		);
+	
+		$args = array(
+			'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'post-formats'),
+			'labels' => $labels,
+			'menu_icon' => 'dashicons-book-alt',
+			'menu_position' => 5,
+			'public' => true,
+			'query_var' => true,
+			//'rewrite' => true,
+			'rewrite' => array('slug' => 'book'),
+			'capability_type' => 'post',
+			'has_archive' => true,
+			'hierarchical' => false,
+			'exclude_from_search' => false,
+			'show_in_rest' => true
+		);
+		register_post_type('Books', $args);
+	}
+	add_action('init', 'lantern_books');
