@@ -39,7 +39,7 @@ Template Name: Lantern Home
             $args = array(
                 'post_type' => 'books',
                 'post_status' => 'publish',
-                // 'portfolio_category' => 'featured',
+                'book_category' => 'featured',
                 'posts_per_page' => 6,
                 'orderby' => 'date',
                 'order' => 'DESC'
@@ -73,6 +73,28 @@ Template Name: Lantern Home
         <?php endwhile; endif; wp_reset_postdata(); ?>
 
             </div>
+        </div>
+    </div>
+
+    <div class="news-featured">
+        <div class="featured-item">
+            <div class="col">
+                <div class="circle-wrap">
+                    <div class="content">
+                        <p class="date">August 08, 2020</p>
+                        <p class="title">Lantern At The Black Vegfest In Brooklyn</p>   
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <p>The Black VegFest has announced that they will be back in Brooklyn for their third year on August 8-9, 2020. This fest addresses food sovereignty in poor communities of color, women’s rights, unhealthy food in our neighborhoods, gender bias, environmental pollution, gentrification, and animal suffering. Lantern is a proud supporter and will be there selling books.</p>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="7" viewBox="0 0 35 7"><defs><style>.a{fill:#0d88c1;}</style></defs><rect class="a" width="35" height="7"/></svg> Read More</a>
+            </div>
+        </div>                
+        <div class="featured-grid">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
         </div>
     </div>
 

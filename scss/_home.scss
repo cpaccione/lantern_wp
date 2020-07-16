@@ -68,3 +68,38 @@
         }
     }
 }
+
+.featured-item {
+    
+    .circle-wrap {
+        background-color: $light-blue;
+        width: 325px;
+        height: 325px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+
+        .content {
+            max-width: 80%;
+
+            .title {
+                font-family: 'Montserrat', sans-serif;
+                color: $lantern-yellow;
+                text-transform: uppercase;
+                font-size: 1.5625rem;
+                font-weight: 700;
+                margin: 0;
+            }
+        
+            .date {
+                font-size: 1.5625rem;
+                color: $white;
+                font-weight: 600;
+                margin: 0;
+            }
+
+        }
+    }
+}

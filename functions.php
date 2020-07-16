@@ -177,6 +177,12 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 
+
+/**
+ * Custom Post Types
+ */
+require get_template_directory() . '/inc/custom-post-types.php';
+
 /**
  * Customizer additions.
  */
@@ -188,40 +194,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-	// Custom Post Book
-	function lantern_books() {
-
-		$labels = array(
-		'name' => _x('Books', 'plural'),
-		'singular_name' => _x('Book', 'singular'),
-		'menu_name' => _x('Books', 'admin menu'),
-		'name_admin_bar' => _x('Book', 'admin bar'),
-		'add_new' => _x('Add New ', 'add new'),
-		'add_new_item' => __('Add New Book'),
-		'new_item' => __('New Book'),
-		'edit_item' => __('Edit Book'),
-		'view_item' => __('View Book'),
-		'all_items' => __('All Books'),
-		'search_items' => __('Search Books'),
-		'not_found' => __('No Book found.'),
-		);
-	
-		$args = array(
-			'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'post-formats'),
-			'labels' => $labels,
-			'menu_icon' => 'dashicons-book-alt',
-			'menu_position' => 5,
-			'public' => true,
-			'query_var' => true,
-			//'rewrite' => true,
-			'rewrite' => array('slug' => 'book'),
-			'capability_type' => 'post',
-			'has_archive' => true,
-			'hierarchical' => false,
-			'exclude_from_search' => false,
-			'show_in_rest' => true
-		);
-		register_post_type('Books', $args);
-	}
-	add_action('init', 'lantern_books');
