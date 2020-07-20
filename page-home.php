@@ -13,6 +13,7 @@ Template Name: Lantern Home
 <?php get_header(); ?>
 
 <div class="home-hero">
+    <img class="circle-graphic" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/circle_graphic.svg" alt="circle graphic">
     <div class="container">
     <div class="home-hero-grid">
         <div class="col text">
@@ -95,14 +96,28 @@ Template Name: Lantern Home
                 </div>
                 <div class="col">
                     <p>The Black VegFest has announced that they will be back in Brooklyn for their third year on August 8-9, 2020. This fest addresses food sovereignty in poor communities of color, women’s rights, unhealthy food in our neighborhoods, gender bias, environmental pollution, gentrification, and animal suffering. Lantern is a proud supporter and will be there selling books.</p>
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="7" viewBox="0 0 35 7"><defs><style>.a{fill:#0d88c1;}</style></defs><rect class="a" width="35" height="7"/></svg> Read More</a>
+                    <a href="#"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/link_graphic.svg" alt="link"> Read More</a>
                 </div>
-            </div>                
-            <div class="featured-grid">
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
             </div>
+
+            <div class="featured-grid">
+                <div class="col">
+                    <h2 class="title">karen davis on our hen house podcast</h2>
+                    <p>Karen Davis was recently on the Our Hen House podcast to talk about her book, For the Birds, including discussing why the language we use when talking about animals is so important. You can listen to it here.</p>
+                    <a href="" class="cta"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/audio.svg" alt="link"> listen</a>
+                </div>
+                <div class="col">
+                    <h2 class="title">THE CLEAN PET FOOD REVOLUTION REVIEWED IN ANIMAL CULTURE</h2>
+                    <p>The January issue of Animal Culture is now out, the magazine co-created by Patricia Denys, contributor to The Art of the Animal. This issue reviews The Clean Pet Food Revolution.</p>
+                    <a href="" class="cta"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/link_graphic.svg" alt="link"> read more</a>
+                </div>
+                <div class="col">
+                    <h2 class="title">RACISM AS ZOOLOGICAL WITCHCRAFT AVAILABLE AS AUDIOBOOK</h2>
+                    <p>Racism as Zoological Witchcraft by Aph Ko is now available as an audiobook here.</p>
+                    <a href="" class="cta"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/audio.svg" alt="link">listen</a>
+                </div>
+            </div>
+
         </div>
     </div>
 
