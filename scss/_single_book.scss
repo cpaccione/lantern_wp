@@ -1,0 +1,10 @@
+.single-books {
+    img {
+        max-width: 350px;
+    }
+}
+
+.single-book-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
