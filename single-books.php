@@ -24,9 +24,9 @@ get_header();
                 <div class="col">
                     <div class="book-title-wrap">
                         <h2 class="book-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></h2>
-                        <p class="sub-title"></p>
-                        <p class="author"></p>
-                        <ul>
+                        <p class="subtitle"><?php the_field('subtitle'); ?></p>
+                        <p class="author"><?php the_field('author'); ?></p>
+                        <ul class="book-meta">
                             <li>352 pp</li>
                             <li>6" x 9"</li>
                             <li>Paperpack</li>
