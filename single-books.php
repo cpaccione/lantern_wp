@@ -67,6 +67,65 @@ get_header();
             </div>
         </div>
 
+        <div class="container">
+            <div class="section-title">
+                <h2>related titles</h2>
+            </div>
+
+
+            <?php
+                        
+                if( have_rows('related_book_repeater') ):
+
+                    echo '<ul class="book-meta">';
+                        
+                        while( have_rows('book_meta') ) : the_row();
+
+                            $item = get_sub_field('book_meta_item');
+
+                                echo '<li>' . $item . '</li>';
+                
+                        endwhile;
+
+                    echo '</ul>';
+
+                endif;
+
+            ?>
+
+            <!-- Start Repeater -->
+            <?php if( have_rows('related_book_repeater')): // check for repeater fields ?>
+                <div class="related-book-grid">
+
+                    <?php while ( have_rows('related_book_repeater')) : the_row(); // loop through the repeater fields ?>
+
+                        <?php // set up post object
+                            $post_object = get_sub_field('related_book');
+                            if( $post_object ) :
+                            $post = $post_object;
+                            setup_postdata($post);
+                            ?>
+
+                        <article class="related-book"> 
+
+                            <?php the_title(); ?>
+                            <?php the_post_thumbnail(); ?>
+                            <?php // whatever post stuff you want goes here ?>
+
+                        </article>
+
+                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+
+                        <?php endif; ?> 
+
+                    <?php endwhile; ?>
+
+                </div>
+            <!-- End Repeater -->
+            <?php endif; ?>
+
+        </div>
+
 
     
 <?php get_footer(); ?>
