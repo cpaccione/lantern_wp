@@ -26,17 +26,41 @@ get_header();
                         <h2 class="book-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></h2>
                         <p class="subtitle"><?php the_field('subtitle'); ?></p>
                         <p class="author"><?php the_field('author'); ?></p>
-                        <ul class="book-meta">
-                            <li>352 pp</li>
-                            <li>6" x 9"</li>
-                            <li>Paperpack</li>
-                            <li>Published: December 2019</li>
-                            <li>978-1-59056-602-2</li>
-                        </ul>
-                        <div class="editor">
-                            <p>In Love Notes, a collection of articles, essays, and presentations, Philip McKibbin introduces the Politics of Love and explores the possibilities of this emerging theory. The Politics of Love affirms the importance of love and reimagines our relationships: to ourselves, each other, non-human animals, and the natural environment. This love is inclusive, critical, generous, and constructive. Instead of a politics of fear and distrust, of separation and narrow-mindedness, the Politics of Love presents a new vision that extends beyond individuals, families, the nation state, and even human beings: it is love that will bring about justice for other species, and it may also enable us to address climate change.</p>
 
-                            <p>This book presents an intellectual journey; it charts a course for the future, and invites you to help take the Politics of Love forward.</p> 
+                        <?php
+                        
+                            if( have_rows('book_meta') ):
+
+                                echo '<ul class="book-meta">';
+                                    
+                                    while( have_rows('book_meta') ) : the_row();
+
+                                        $item = get_sub_field('book_meta_item');
+
+                                            echo '<li>' . $item . '</li>';
+                            
+                                    endwhile;
+
+                                echo '</ul>';
+
+                            endif;
+
+                        ?>
+
+                        <div class="editor">
+
+                            <?php
+
+                                while ( have_posts() ) :
+                                    
+                                    the_post();
+
+                                    get_template_part( 'template-parts/content', 'book' );
+
+                                endwhile; // End of the loop.
+
+                            ?>
+
                         </div>
                     </div>   
                 </div>
