@@ -134,6 +134,20 @@
         flex-direction: column;
         align-self: center;
     }
+
+    .featured-link {
+        color: #1A345A;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: row;
+
+        img {
+            padding-right: 1rem;
+        }
+    }
     
     .circle-wrap {
         position: relative;

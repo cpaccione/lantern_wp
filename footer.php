@@ -13,17 +13,26 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'lantern' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'lantern' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'lantern' ), 'lantern', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+			<div class="col">
+				<img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/lantern_white_logo.svg" alt="Lantern Footer logo">
+			</div>
+			<div class="col">
+				<?php dynamic_sidebar('footer-2'); ?>
+			</div>
+			<div class="col">
+				<?php dynamic_sidebar('footer-3'); ?>
+			</div>
+			<div class="col">
+				<div class="last-column">
+					<div class="logo-wrap">
+						<img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/erp_logo.svg" alt="Environmentally Responsible Publisher">	
+					</div>
+					<div class="text">
+						<h3>Environmental Standards</h3>
+						<p>Lantern is honored to be a recipient of the highest standard in environmentally responsible publishing from the Green Press Initiative.</p>	
+					</div>
+				</div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

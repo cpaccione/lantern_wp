@@ -96,7 +96,7 @@ Template Name: Lantern Home
                 </div>
                 <div class="col">
                     <p>The Black VegFest has announced that they will be back in Brooklyn for their third year on August 8-9, 2020. This fest addresses food sovereignty in poor communities of color, women’s rights, unhealthy food in our neighborhoods, gender bias, environmental pollution, gentrification, and animal suffering. Lantern is a proud supporter and will be there selling books.</p>
-                    <a href="#"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/link_graphic.svg" alt="link"> Read More</a>
+                    <a class="featured-link" href="#"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/link_graphic.svg" alt="link"> Read More</a>
                 </div>
             </div>
 

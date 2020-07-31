@@ -1,0 +1,31 @@
+.site-footer {
+    background-color: $light-blue;
+    color: $white;
+
+    .site-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+
+        .last-column {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+    }
+
+    .widget_nav_menu {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            
+            li {
+                padding-bottom: .5rem;
+
+                a {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
