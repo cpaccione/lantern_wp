@@ -2,3 +2,111 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.board-grid {
+
+    @media (min-width: 992px) {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profile {
+        text-align: center;
+
+        .photo {
+            max-width: 275px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 1;
+            margin: 2.5rem 0 .5rem 0;
+        }
+
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            line-height: 1;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .bio {
+            font-size: 1rem;
+            max-width: 40ch;
+            margin: 0 auto 2rem auto;
+        }
+    }
+}
+
+.associates-grid {
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media (min-width: 992px) {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile {
+        text-align: center;
+
+        .photo {
+            max-width: 275px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 1;
+            margin: 2.5rem 0 .5rem 0;
+        }
+
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            line-height: 1;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .bio {
+            font-size: 1rem;
+            max-width: 40ch;
+            margin: 0 auto 2rem auto;
+        }
+    }
+}
+
+.donate {
+    .col {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        .featured-link {
+            color: #1A345A;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            img {
+                padding-right: 1rem;
+            }
+        }
+    }
+}
