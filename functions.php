@@ -236,3 +236,6 @@ function lantern_register_widgets() {
 
 }
 add_action( 'widgets_init', 'lantern_register_widgets' );
+
+add_theme_support('editor-styles');
+add_editor_style('style-editor.css');

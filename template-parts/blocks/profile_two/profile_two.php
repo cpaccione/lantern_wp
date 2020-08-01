@@ -10,13 +10,13 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'board-grid-' . $block['id'];
+$id = 'associates-grid-' . $block['id'];
 if( !empty($block['anchor']) ) {
     $id = $block['anchor'];
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'board-grid';
+$className = 'associates-grid';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
@@ -42,10 +42,10 @@ $s_title = get_field('section_title');
 
                 <?php while (have_rows('profile_repeater') ): the_row();
                 
-                $title = get_sub_field('title');
-$name = get_sub_field('name');
-$bio = get_sub_field('bio');
-$p_photo = get_sub_field('profile_photo');
+                    $title = get_sub_field('title');
+                    $name = get_sub_field('name');
+                    $bio = get_sub_field('bio');
+                    $p_photo = get_sub_field('profile_photo');
                 
                 ?>
 
