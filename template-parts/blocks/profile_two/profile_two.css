@@ -4,9 +4,11 @@
 
 #associates .design-right {
     position: absolute;
-    right: 0;
+    top: -150px;
+    right: -57px;
     width: 221px;
     height: 201px;
+    z-index: -100;
 }
 
 .associates-grid {
