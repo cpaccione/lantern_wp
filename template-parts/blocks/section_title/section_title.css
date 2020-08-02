@@ -1,0 +1,15 @@
+    .section-title {
+        text-align: center;
+        margin: 5rem 0 5rem 0;
+    }
+    
+    .section-title h2 {
+        font-size: 1.875rem;
+        color: $grey;
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom: 8px solid $light-blue;
+        display: inline;
+        text-align: center;
+        margin: 0 auto;
+    }

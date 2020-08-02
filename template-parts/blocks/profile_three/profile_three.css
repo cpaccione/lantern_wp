@@ -1,3 +1,14 @@
+#three_profiles {
+    position: relative;
+}
+
+#three_profiles .design {
+    position: absolute;
+    left: -55px;
+    top: -110px;
+    z-index: -100;
+}
+
 .board-grid .profile {
     text-align: center;
 }
