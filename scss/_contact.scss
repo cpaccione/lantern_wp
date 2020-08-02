@@ -1,0 +1,91 @@
+.contact-col-one {
+    position: relative;
+
+    .yellow-graphic {
+        position: absolute;
+        right: -10px;
+        width: 150px;
+        z-index: -100;
+    }
+
+    .contact-col-grid {
+        display: grid;  
+        grid-template-columns: 1fr;
+
+        @media(min-width: 600px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+}
+
+.contact-col-two {
+    position: relative;
+
+    .graphic-one {
+        position: absolute;
+        right: 30px;
+        width: 100px;
+        z-index: -100;
+    }
+
+    .graphic-two {
+        position: absolute;
+        left: -20px;
+        width: 100px;
+        z-index: -100;
+    }
+
+    .graphic-three {
+        position: absolute;
+        right: -42px;
+        bottom: -70px;
+        width: 75px;
+        z-index: -100;
+    }
+
+    .contact-col-grid {
+        display: grid;  
+        grid-template-columns: 1fr;
+
+        @media(min-width: 600px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+}
+
+.contact-col-three {
+    position: relative;
+
+    .yellow-graphic {
+        position: absolute;
+        right: 0;
+        width: 200px;
+        z-index: -100;
+    }
+
+}
+
+.contact-col-four {
+    position: relative;
+
+    .yellow-graphic {
+        position: absolute;
+        right: 0;
+        width: 243px;
+        height: 224px;
+        z-index: -100;
+    }
+
+    .contact-col-grid {
+        display: grid;  
+        grid-template-columns: 1fr;
+
+        @media(min-width: 600px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+}
+

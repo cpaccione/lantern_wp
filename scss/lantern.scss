@@ -10,8 +10,5 @@
 @import 'home';
 @import 'about';
 @import 'single_book';
+@import 'contact';
 @import 'new_releases';
-
-.logged-in .wp-block {
-    max-width: 720px !important;
-}
