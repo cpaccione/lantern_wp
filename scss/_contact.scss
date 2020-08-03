@@ -1,14 +1,17 @@
-.contact-col-one {
-    position: relative;
 
-    .yellow-graphic {
+.contact-one {
+    position: relative;
+    overflow: hidden;
+
+    .graphic {
         position: absolute;
         right: -10px;
         width: 150px;
         z-index: -100;
+        overflow: hidden;
     }
 
-    .contact-col-grid {
+    .contact-grid {
         display: grid;  
         grid-template-columns: 1fr;
 
@@ -21,6 +24,7 @@
 
 .contact-col-two {
     position: relative;
+    overflow: hidden;
 
     .graphic-one {
         position: absolute;
@@ -39,7 +43,7 @@
     .graphic-three {
         position: absolute;
         right: -42px;
-        bottom: -70px;
+        bottom: 0;
         width: 75px;
         z-index: -100;
     }
@@ -57,11 +61,21 @@
 
 .contact-col-three {
     position: relative;
-
-    .yellow-graphic {
+    overflow: hidden;
+  
+    .graphic-one {
         position: absolute;
-        right: 0;
-        width: 200px;
+        left: -30px;
+        bottom: 50px;
+        width: 100px;
+        z-index: -100;
+    }
+
+    .graphic-two {
+        position: absolute;
+        right: -40px;
+        width: 140px;
+        bottom: 0;
         z-index: -100;
     }
 
@@ -69,12 +83,14 @@
 
 .contact-col-four {
     position: relative;
+    overflow: hidden;
+    margin-bottom: 5rem;
 
-    .yellow-graphic {
+    .graphic {
         position: absolute;
-        right: 0;
-        width: 243px;
-        height: 224px;
+        left: -50px;
+        bottom: 40px;
+        width: 100px;
         z-index: -100;
     }
 

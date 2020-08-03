@@ -15,13 +15,15 @@ Template Name: Contact
     <div class="page-hero" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
 <?php endif; ?>
 
-    <section class="contact-col-one">
-        <img class="yellow-graphic" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/graphic_yellow_circle.svg" alt="Yellow circle graphic">
+    <div class="contact-one">
+    
+        <img class="graphic" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/graphic_yellow_circle.svg" alt="Graphic">
+
         <div class="container">
             <div class="section-title">
                 <h2>contact information</h2>
             </div>
-            <div class="contact-col-grid">
+            <div class="contact-grid">
                 <div class="col">
                     <p>Lantern Publishing & Media</p>
                     <p>128 2nd Place, Garden Suite</p>
@@ -42,7 +44,7 @@ Template Name: Contact
                 </div>
             </div>
         </div>    
-    </section>
+    </div>
 
     <section class="contact-col-two">
         <img class="graphic-one" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/light_blue_circle.svg" alt="graphic one">
@@ -50,7 +52,7 @@ Template Name: Contact
         <img class="graphic-three" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/design_02.svg" alt="graphic three">
         <div class="container">
             <div class="section-title">
-                <h2>contact information</h2>
+                <h2>order information</h2>
             </div>
             <div class="contact-col-grid">
                 <div class="col">
@@ -76,7 +78,8 @@ Template Name: Contact
     </section>
 
     <section class="contact-col-three">
-        <img class="yellow-graphic" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/graphic_yellow_circle.svg" alt="Yellow circle graphic">
+        <img class="graphic-one" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/blue_grid.svg" alt="graphic">
+        <img class="graphic-two" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/yellow_grid.svg" alt="graphic">
         <div class="container">
             <div class="section-title">
                 <h2>MANUSCRIPT SUBMISSION GUIDELINES</h2>
@@ -96,7 +99,7 @@ Template Name: Contact
     </section>
 
     <section class="contact-col-four">
-        <img class="yellow-graphic" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/graphic_yellow_circle.svg" alt="Yellow circle graphic">
+        <img class="graphic" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/yellow_donut_circle.svg" alt="Yellow donut circle graphic">
         <div class="container">
             <div class="contact-col-grid">
                 <div class="col">

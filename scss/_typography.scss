@@ -18,7 +18,7 @@ p, a {
     margin: 5rem 0 5rem 0;
 
     h2 {
-        font-size: 1.875rem;
+        font-size: 1.25rem;
         color: $grey;
         text-transform: uppercase;
         text-align: center;
@@ -26,5 +26,10 @@ p, a {
         display: inline;
         text-align: center;
         margin: 0 auto;
+        line-height: 2;
+
+        @media(min-width: 600px) {
+            font-size: 1.875rem;
+        }
     }
 }
