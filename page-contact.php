@@ -21,26 +21,14 @@ Template Name: Contact
 
         <div class="container">
             <div class="section-title">
-                <h2>contact information</h2>
+                <h2><?php the_field('section_one_title'); ?></h2>
             </div>
             <div class="contact-grid">
                 <div class="col">
-                    <p>Lantern Publishing & Media</p>
-                    <p>128 2nd Place, Garden Suite</p>
-                    <p>Brooklyn, NY 11231</p>
-
-                    <p>Hours: Monday to Friday 9:00 a.m. to 5:00 p.m., EST</p>
-
-                    <p>T: 212.414.2275</p>
+                    <?php the_field('section_one_left_column'); ?>
                 </div>
                 <div class="col">
-                    <p>Editorial:</p>
-                    <p>Brian Normoyle</p>
-                    <p>brian@lanternpm.org</p>
-                    <p>Martin Rowe</p> 
-                    martin@lanternpm.org
-                    Production: Emily Lavieri-Scull 
-                    emily@lanternpm.com
+                    <?php the_field('section_one_right_column'); ?>
                 </div>
             </div>
         </div>    
