@@ -152,7 +152,7 @@ function lantern_scripts() {
 
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.13.1/css/all.css', array(), '1.0', 'all');
 
-	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/lantern.css', array(), '1.1', 'all');
+	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/lantern.css', array(), '1.4', 'all');
 
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true);
 
@@ -212,6 +212,18 @@ function lantern_register_widgets() {
 
 	register_sidebar(
 		array(
+			'name'          => esc_html__( 'Footer Column One', 'stride' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Add widgets here.', 'stride' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
 			'name'          => esc_html__( 'Footer Column Two', 'stride' ),
 			'id'            => 'footer-2',
 			'description'   => esc_html__( 'Add widgets here.', 'stride' ),
@@ -226,6 +238,30 @@ function lantern_register_widgets() {
 		array(
 			'name'          => esc_html__( 'Footer Column Three', 'stride' ),
 			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Add widgets here.', 'stride' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Column Four', 'stride' ),
+			'id'            => 'footer-4',
+			'description'   => esc_html__( 'Add widgets here.', 'stride' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Column Five', 'stride' ),
+			'id'            => 'footer-5',
 			'description'   => esc_html__( 'Add widgets here.', 'stride' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

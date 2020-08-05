@@ -1,0 +1,47 @@
+.blog-hero {
+    background-image: url('../images/blog-hero@2x.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 343px;
+}
+
+.blog-main {
+    margin-top: 5rem;
+}
+
+.post {
+    margin-bottom: 5rem;
+    
+    .blog-wrap {
+        display: grid;
+        max-width: 1140px;
+        margin: 0 auto;
+
+        @media(min-width: 800px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .featured-image {
+            max-width: 90%;
+            margin: 0 auto;
+
+            @media (min-width: 800px) {
+                max-width: 75%;
+            }
+        }
+
+        .blog-preview {
+            padding: 0 1.5rem 0 1.5rem;
+
+            h2 {
+                margin-bottom: 0;
+                line-height: 1.2;
+            }
+
+            .entry-date {
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

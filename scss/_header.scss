@@ -71,7 +71,6 @@
         li {
             a {
                 font-family: 'Montserrat', sans-serif;
-                // font-weight: 700;
                 color: $lantern-black;
                 text-decoration: none;
                 font-size: 1.25rem;
@@ -79,7 +78,7 @@
 
                 @media (min-width: 1060px) {
                   font-weight: 700;
-                  font-size: 1rem;
+                  font-size: 0.875rem;
                   line-height: 1;
                 }
             }

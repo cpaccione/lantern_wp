@@ -40,26 +40,14 @@ Template Name: Contact
         <img class="graphic-three" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/design_02.svg" alt="graphic three">
         <div class="container">
             <div class="section-title">
-                <h2>order information</h2>
+                <h2><?php the_field('section_two_title'); ?></h2>
             </div>
             <div class="contact-col-grid">
                 <div class="col">
-                    <p>Lantern Publishing & Media</p>
-                    <p>128 2nd Place, Garden Suite</p>
-                    <p>Brooklyn, NY 11231</p>
-
-                    <p>Hours: Monday to Friday 9:00 a.m. to 5:00 p.m., EST</p>
-
-                    <p>T: 212.414.2275</p>
+                    <?php the_field('section_two_left_column'); ?>
                 </div>
                 <div class="col">
-                    <p>Editorial:</p>
-                    <p>Brian Normoyle</p>
-                    <p>brian@lanternpm.org</p>
-                    <p>Martin Rowe</p> 
-                    martin@lanternpm.org
-                    Production: Emily Lavieri-Scull 
-                    emily@lanternpm.com
+                    <?php the_field('section_two_right_column'); ?>
                 </div>
             </div>
         </div>    
@@ -70,17 +58,11 @@ Template Name: Contact
         <img class="graphic-two" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/yellow_grid.svg" alt="graphic">
         <div class="container">
             <div class="section-title">
-                <h2>MANUSCRIPT SUBMISSION GUIDELINES</h2>
+                <h2><?php the_field('section_two_title'); ?></h2>
             </div>
             <div class="contact-col-grid">
                 <div class="col">
-                    <p>Lantern Publishing & Media</p>
-                    <p>128 2nd Place, Garden Suite</p>
-                    <p>Brooklyn, NY 11231</p>
-
-                    <p>Hours: Monday to Friday 9:00 a.m. to 5:00 p.m., EST</p>
-
-                    <p>T: 212.414.2275</p>
+                    <?php the_field('copy_text'); ?>
                 </div>
             </div>
         </div>    
@@ -92,27 +74,15 @@ Template Name: Contact
             <div class="contact-col-grid">
                 <div class="col">
                     <div class="section-title">
-                        <h2>contact information</h2>
+                        <h2><?php the_field('section_two_title'); ?></h2>
                     </div>
-                    <p>Lantern Publishing & Media</p>
-                    <p>128 2nd Place, Garden Suite</p>
-                    <p>Brooklyn, NY 11231</p>
-
-                    <p>Hours: Monday to Friday 9:00 a.m. to 5:00 p.m., EST</p>
-
-                    <p>T: 212.414.2275</p>
+                    <?php the_field('section_two_title'); ?>
                 </div>
                 <div class="col">
                     <div class="section-title">
-                        <h2>contact information</h2>
+                        <h2><?php the_field('section_two_title'); ?></h2>
                     </div>
-                    <p>Editorial:</p>
-                    <p>Brian Normoyle</p>
-                    <p>brian@lanternpm.org</p>
-                    <p>Martin Rowe</p> 
-                    martin@lanternpm.org
-                    Production: Emily Lavieri-Scull 
-                    emily@lanternpm.com
+                    <?php the_field('section_two_title'); ?>
                 </div>
             </div>
         </div>    

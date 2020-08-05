@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<div class="col">
-				<img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/lantern_white_logo.svg" alt="Lantern Footer logo">
+				<?php dynamic_sidebar('footer-1'); ?>
 			</div>
 			<div class="col">
 				<?php dynamic_sidebar('footer-2'); ?>
@@ -25,11 +25,10 @@
 			<div class="col">
 				<div class="last-column">
 					<div class="logo-wrap">
-						<img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/erp_logo.svg" alt="Environmentally Responsible Publisher">	
+						<?php dynamic_sidebar('footer-4'); ?>
 					</div>
 					<div class="text">
-						<h3>Environmental Standards</h3>
-						<p>Lantern is honored to be a recipient of the highest standard in environmentally responsible publishing from the Green Press Initiative.</p>	
+						<?php dynamic_sidebar('footer-5'); ?>
 					</div>
 				</div>
 			</div>

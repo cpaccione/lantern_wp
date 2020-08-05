@@ -528,7 +528,7 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
+/* a {
 	color: #4169e1;
 }
 
@@ -540,7 +540,7 @@ a:hover,
 a:focus,
 a:active {
 	color: #191970;
-}
+} */
 
 a:focus {
 	outline: thin dotted;
@@ -690,15 +690,6 @@ textarea {
 
 /* Posts and pages
 --------------------------------------------- */
-.sticky {
-	display: block;
-}
-
-.post,
-.page {
-	margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
 	display: none;
 }

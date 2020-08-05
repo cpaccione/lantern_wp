@@ -214,20 +214,4 @@
         color: $black;
     }
 
-    .cta {
-        color: $dark-blue;
-        // font-size: 1.5rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        text-decoration: none;
-        margin-bottom: 3rem;
-        // display: inline-block;
-        display: flex;
-        flex-direction: row;
-
-        img {
-            padding-right: 1rem;
-        }
-    }
-
 }

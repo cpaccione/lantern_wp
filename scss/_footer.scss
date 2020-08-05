@@ -3,12 +3,22 @@
     color: $white;
 
     .site-info {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 5rem 1.5rem 2rem 1.5rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 2fr;
 
         .last-column {
             display: grid;
+            grid-gap: 2rem;
             grid-template-columns: 1fr 3fr;
+
+            h2 {
+                color: $white;
+                line-height: 1.2;
+                margin-bottom: .5rem;
+            }
         }
     }
 
