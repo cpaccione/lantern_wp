@@ -1,0 +1,25 @@
+.widget_categories {
+
+	.widget-title {
+		color: $dark-blue;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		font-family: 'Source Sans Pro', sans-serif;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		li {
+			
+			a {
+				text-decoration: none;
+				color: $dark-blue;
+				text-transform: uppercase;
+				font-size: 1.125rem;
+			}
+		}
+	}
+}

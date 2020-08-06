@@ -1,40 +1,13 @@
-<?php
 
-/*
-
-Template Name: Subject
-
-*/
-
-
-?>
-
-
-<?php get_header(); ?>
-
-
-<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'lantern' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-?>
-
+<div class="section-subject">
     <div class="container">
-        <div class="row">
+        <div class="subject-areas">
         
-            <div class="col-md-3">
+            <div class="sidebar">
                 <?php dynamic_sidebar( 'sidebar-1' ); ?>
             </div>
 
-            <div class="col-md-9">
+            <div class="main-content">
                 <?php
 
                     $args = array(
@@ -47,10 +20,10 @@ Template Name: Subject
                     $query = new WP_Query($args);
 
                 ?>
-                <div class="row">
+
                 <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
-                    <div class="col-md-4">
+                    <div class="book-col">
                         <a href="<?php the_permalink(); ?>">
                             <div class="book-wrap">
                                 
@@ -71,8 +44,8 @@ Template Name: Subject
                     </div>
 
                 <?php endwhile; endif; wp_reset_postdata(); ?>
+
+                </div>
             </div>
         </div>
     </div>
-
-<?php get_footer(); ?>
