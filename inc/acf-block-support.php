@@ -21,7 +21,7 @@ function register_acf_block_types() {
             wp_enqueue_style( 'lantern-two-column', get_template_directory_uri() . '/template-parts/blocks/two_column/two_column.css', array(), '1.0', 'all' );
         },
         'category'          => 'common',
-        'mode'              => 'auto',
+        'mode'              => 'edit',
         'post_types'        => array('page'),
         // 'icon'              => 'admin-comments',
         'icon' => array(
@@ -97,7 +97,7 @@ function register_acf_block_types() {
             wp_enqueue_style( 'lantern-section-title', get_template_directory_uri() . '/template-parts/blocks/section_title/section_title.css', array(), '1.0', 'all' );
         },
         'category'          => 'common',
-        'mode'              => 'auto',
+        'mode'              => 'edit',
         'post_types'        => array('page'),
         // 'icon'              => 'admin-comments',
         'icon' => array(
@@ -111,5 +111,82 @@ function register_acf_block_types() {
         'keywords'          => array( 'Lantern', 'Section', 'Title' ),
         
     ));
+
+
+        // register a standard hero block
+        acf_register_block_type(array(
+            'name'              => 'home_hero',
+            'title'             => __('Home Hero'),
+            'description'       => __('The block displays the Lantern hero.'),
+            'render_template'   => 'template-parts/blocks/home/home_hero.php',
+            'enqueue_assets'    => function() {
+                wp_enqueue_style( 'lantern-hero', get_template_directory_uri() . '/template-parts/blocks/home/home_hero.css', array(), '1.1', 'all' );
+            },
+            'category'          => 'common',
+            'mode'              => 'edit',
+            'post_types'        => array('page'),
+            // 'icon'              => 'admin-comments',
+            'icon' => array(
+                // Specifying a background color to appear with the icon e.g.: in the inserter.
+                'background' => '#0D88C1',
+                // Specifying a color for the icon (optional: if not set, a readable color will be automatically defined)
+                'foreground' => '#ffffff',
+                // Specifying a dashicon for the block
+                'src' => 'admin-comments',
+                ),
+            'keywords'          => array( 'Lantern', 'Home', 'Hero' ),
+            
+        ));
+
+        // register a standard hero block
+        acf_register_block_type(array(
+            'name'              => 'books_post_type',
+            'title'             => __('Book post type'),
+            'description'       => __('The block displays the Lantern hero.'),
+            'render_template'   => 'template-parts/blocks/books/books.php',
+            'enqueue_assets'    => function() {
+                wp_enqueue_style( 'book-post-type', get_template_directory_uri() . '/template-parts/blocks/books/books.css', array(), '1.1', 'all' );
+            },
+            'category'          => 'common',
+            'mode'              => 'edit',
+            'post_types'        => array('page'),
+            // 'icon'              => 'admin-comments',
+            'icon' => array(
+                // Specifying a background color to appear with the icon e.g.: in the inserter.
+                'background' => '#0D88C1',
+                // Specifying a color for the icon (optional: if not set, a readable color will be automatically defined)
+                'foreground' => '#ffffff',
+                // Specifying a dashicon for the block
+                'src' => 'admin-comments',
+                ),
+            'keywords'          => array( 'Lantern', 'books' ),
+            
+        ));
+
+
+        // register a standard hero block
+        acf_register_block_type(array(
+            'name'              => 'featured_news',
+            'title'             => __('Featured News'),
+            'description'       => __('The block displays the featured news section.'),
+            'render_template'   => 'template-parts/blocks/featured-news/featured-news.php',
+            'enqueue_assets'    => function() {
+                wp_enqueue_style( 'featured-news', get_template_directory_uri() . '/template-parts/blocks/featured-news/featured-news.css', array(), '1.1', 'all' );
+            },
+            'category'          => 'common',
+            'mode'              => 'edit',
+            'post_types'        => array('page'),
+            // 'icon'              => 'admin-comments',
+            'icon' => array(
+                // Specifying a background color to appear with the icon e.g.: in the inserter.
+                'background' => '#0D88C1',
+                // Specifying a color for the icon (optional: if not set, a readable color will be automatically defined)
+                'foreground' => '#ffffff',
+                // Specifying a dashicon for the block
+                'src' => 'admin-comments',
+                ),
+            'keywords'          => array( 'Lantern', 'featured', 'news' ),
+            
+        ));
 
 }

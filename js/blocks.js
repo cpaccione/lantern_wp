@@ -9,8 +9,8 @@ wp.domReady( () => {
     wp.blocks.registerBlockStyle( 'core/paragraph', {
 		name: 'max-width-1200',
 		label: 'Max-width of 1200px',
-    } );
-    
+	} );
+	
     wp.blocks.registerBlockStyle( 'core/columns', {
 		name: 'max-width-1200',
 		label: 'Max-width of 1200px',

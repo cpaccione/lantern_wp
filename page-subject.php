@@ -13,6 +13,7 @@ Template Name: Subject
 <?php get_header(); ?>
 
 
+
 <?php
 		while ( have_posts() ) :
 			the_post();
@@ -26,8 +27,8 @@ Template Name: Subject
 
 		endwhile; // End of the loop.
 ?>
-
-    <div class="container">
+<section class="subject">
+    <div class="container-md">
         <div class="row">
         
             <div class="col-md-3">
@@ -74,5 +75,7 @@ Template Name: Subject
             </div>
         </div>
     </div>
+
+</section>
 
 <?php get_footer(); ?>

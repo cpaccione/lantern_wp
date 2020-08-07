@@ -1,9 +1,12 @@
 h1, h2, h3, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     margin: 0 0 1rem 0;
 }
 
 h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
     color: $light-blue;
 }
 
@@ -55,5 +58,24 @@ a {
 
     &:hover {
         color: $lantern-black;
+    }
+}
+
+.author-button {
+    background-color: transparent;
+    border-color: $light-blue;
+    color: $light-blue;
+    border: 2px solid;
+
+    &:hover {
+        background-color: $dark-blue;
+    }
+
+    &:active {
+        background-color: $dark-blue;
+    }
+
+    &:focus {
+        background-color: $dark-blue;
     }
 }

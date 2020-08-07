@@ -13,22 +13,31 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<div class="col">
-				<?php dynamic_sidebar('footer-1'); ?>
-			</div>
-			<div class="col">
-				<?php dynamic_sidebar('footer-2'); ?>
-			</div>
-			<div class="col">
-				<?php dynamic_sidebar('footer-3'); ?>
-			</div>
-			<div class="col">
-				<div class="last-column">
-					<div class="logo-wrap">
-						<?php dynamic_sidebar('footer-4'); ?>
+			<div class="container-md">
+				<div class="row">
+					<div class="col-md-3">
+						<?php dynamic_sidebar('footer-1'); ?>
 					</div>
-					<div class="text">
-						<?php dynamic_sidebar('footer-5'); ?>
+					<div class="col-md-2">
+						<?php dynamic_sidebar('footer-2'); ?>
+					</div>
+					<div class="col-md-2">
+						<?php dynamic_sidebar('footer-3'); ?>
+					</div>
+					<div class="col-md-5 last-column">
+						<div class="row">
+
+							<div class="col-md-4">
+								<?php dynamic_sidebar('footer-4'); ?>
+							</div>
+
+							<div class="col-md-8">
+								<?php dynamic_sidebar('footer-5'); ?>
+							</div>
+
+						</div>
+
+						</div>
 					</div>
 				</div>
 			</div>

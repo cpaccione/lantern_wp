@@ -1,0 +1,31 @@
+@import '../../../scss/vars';
+
+.home-hero {
+  position: relative;
+  margin-top: 6rem;
+
+    .circle-graphic {
+      position: absolute;
+      left: -60px;
+      z-index: -100;
+    }
+
+    h1 {
+      color: $light-blue;
+      line-height: 1.3;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: $grey;
+    }
+
+    .home-hero-image {
+        position: relative;
+        top: -10%;
+    }
+    
+}
