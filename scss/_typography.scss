@@ -4,6 +4,10 @@ h1, h2, h3, h5, h6 {
     margin: 0 0 1rem 0;
 }
 
+h1 {
+    color: $light-blue;
+}
+
 h2 {
     font-size: 1.5rem;
     line-height: 1.2;

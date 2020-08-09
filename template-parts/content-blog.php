@@ -12,10 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <div class="blog-wrap">
-        <div class="featured-image">
-            <?php lantern_post_thumbnail(); ?>
-        </div>
-        
+
         <div class="entry-content blog-preview">
             <?php the_title('<h2>', '</h2>'); ?>
             <span class="entry-date"><?php echo get_the_date(); ?></span>
