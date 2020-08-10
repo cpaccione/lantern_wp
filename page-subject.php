@@ -32,7 +32,7 @@ Template Name: Subject
         <div class="row">
         
             <div class="col-md-3">
-                <?php dynamic_sidebar( 'sidebar-1' ); ?>
+                <?php dynamic_sidebar( 'sidebar-books' ); ?>
             </div>
 
             <div class="col-md-9">
