@@ -11,28 +11,21 @@ get_header();
 ?>
 	<div class="archive-hero"></div>
 
-	<div class="container">
-
-		<div class="row">
-			<div class="col-md-12">
-				<header class="page-header">
-					<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="archive-description">', '</div>' );
-					?>
-				</header><!-- .page-header -->
-			</div>
-		</div>
-
 		
+
+		<header class="page-header">
+			<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
+			?>
+		</header><!-- .page-header -->
+
 		<main id="primary" class="site-main archive-main">
 
-		<div class="row">
-			<div class="col-md-3">
-                <?php dynamic_sidebar( 'sidebar-books' ); ?>
-            </div>
+				<div class="books-sidebar">
+					<?php dynamic_sidebar( 'sidebar-books' ); ?>
+				</div>
 
-			<div class="col-md-9">
 				<div class="archive-content">
 
 					<?php if ( have_posts() ) : ?>
@@ -61,10 +54,9 @@ get_header();
 					?>
 
 				</div>
-			</div>
-		</div>
 
 		</main><!-- #main -->
+
 	</div>
 
 <?php

@@ -149,12 +149,12 @@ function lantern_scripts() {
 
 	wp_enqueue_style( 'source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap', array(), '1.0', 'all');
 
-	// wp_enqueue_style( 'lantern-style', get_stylesheet_uri(), array(), _S_VERSION );
-	// wp_style_add_data( 'lantern-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'lantern-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'lantern-style', 'rtl', 'replace' );
 
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.13.1/css/all.css', array(), '1.0', 'all');
 
-	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/lantern.css', array(), '1.7', 'all');
+	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/lantern.css', array(), '1.8', 'all');
 
 	wp_enqueue_script( 'bootstrap-bundle', get_template_directory_uri() . '/js/bootstrap.bundle.js', array('jquery'), '1.0', true);
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true);

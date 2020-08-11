@@ -18,7 +18,7 @@
 		</div>
 
         <div class="entry-content blog-preview">
-            <?php the_title('<h2>', '</h2>'); ?>
+			<a class="title" href="<?php the_permalink(); ?>"><?php the_title('<h2>', '</h2>'); ?></a>
             <span class="entry-date"><?php echo get_the_date(); ?></span>
             <?php
             the_content();
