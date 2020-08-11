@@ -2,11 +2,15 @@
     background-image: url('../images/blog-hero@2x.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 343px;
+    height: 200px;
+
+    @media (min-width: 800px) {
+        height: 343px;
+    }
 }
 
 .blog-main {
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .post {
@@ -28,7 +32,11 @@
         }
 
         .blog-preview {
-            padding: 0 1.5rem 0 1.5rem;
+            padding: 2rem 1rem 0 1rem;
+
+            @media(min-width: 800px) {
+                padding: 0 1.5rem 0 1.5rem;
+            }
 
             h2 {
                 margin-bottom: 0;

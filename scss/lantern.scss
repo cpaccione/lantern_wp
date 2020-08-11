@@ -57,3 +57,10 @@
 #primary[tabindex="-1"]:focus {
 	outline: 0;
 }
+
+.height-200 {
+
+    @media(max-width: 800px) {
+        min-height: 200px !important;
+    }
+}
