@@ -64,8 +64,9 @@
 
         .book-meta {
             font-size: 1rem;
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
+            // flex-wrap: wrap;
             list-style: none;
             padding: 0 0 .5rem 0;
             margin: 0;
@@ -75,19 +76,24 @@
             }
 
             li {
-                &::after {
-
-                    @media (min-width: 1050px) {
-                        content: '|';
-                        padding-right: 1rem;
-                        padding-left: 1rem;
-                    }
-                }
+                margin-right: 1rem;
+                margin-bottom: 1rem;
             }
 
-            li:last-child:after {
-                content: none;
-            }
+            // li {
+            //     &::after {
+
+            //         @media (min-width: 1050px) {
+            //             content: '|';
+            //             padding-right: 1rem;
+            //             padding-left: 1rem;
+            //         }
+            //     }
+            // }
+
+            // li:last-child:after {
+            //     content: none;
+            // }
         }
 
     }

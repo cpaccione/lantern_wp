@@ -30,25 +30,75 @@ get_header();
                         <p class="subtitle"><?php the_field('subtitle'); ?></p>
                         <p class="author"><?php the_field('author'); ?></p>
 
-                        <?php
-                        
-                            if( have_rows('book_meta') ):
+                        <ul class="book-meta">
 
-                                echo '<ul class="book-meta">';
-                                    
-                                    while( have_rows('book_meta') ) : the_row();
-
-                                        $item = get_sub_field('book_meta_item');
-
-                                            echo '<li>' . $item . '</li>';
+                            <?php if( get_field('page_number') ): ?>
                             
-                                    endwhile;
+                                <li><i class="fas fa-book-open"></i> <?php the_field('page_number'); ?> pages</li>
 
-                                echo '</ul>';
+                            <?php endif; ?>
 
-                            endif;
+                            <?php if( get_field('book_size') ): ?>
+                            
+                                <li><i class="fas fa-ruler-combined"></i> <?php the_field('book_size'); ?></li>
 
-                        ?>
+                            <?php endif; ?>
+
+                            <?php if( get_field('hardcover_price') ): ?>
+                            
+                                <li><i class="fas fa-dollar-sign"></i> <?php the_field('hardcover_price'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('paperback_price') ): ?>
+                            
+                                <li><i class="fas fa-dollar-sign"></i> <?php the_field('paperback_price'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('ebook_price') ): ?>
+                            
+                                <li><i class="fas fa-dollar-sign"></i> <?php the_field('ebook_price'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('hardcover_isbn') ): ?>
+                            
+                                <li><b>Hardcover ISBN</b> <?php the_field('hardcover_isbn'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('paperback_isbn') ): ?>
+                                
+                                <li><b>Paperback ISBN</b> <?php the_field('paperback_isbn'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('ebook_isbn') ): ?>
+                                
+                                <li><b>eBook ISBN</b> <?php the_field('ebook_isbn'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('book_format') ): ?>
+                                
+                                <li><i class="fas fa-book"></i> <?php the_field('book_format'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('publisher') ): ?>
+                                
+                                <li><b>Publisher:</b> <?php the_field('publisher'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('publication_date') ): ?>
+                                
+                                <li><b>Publication Date:</b> <?php the_field('publication_date'); ?></li>
+
+                            <?php endif; ?>
+
+                        </ul>
 
                         <div class="editor">
 
