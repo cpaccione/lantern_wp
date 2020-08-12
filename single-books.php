@@ -46,19 +46,19 @@ get_header();
 
                             <?php if( get_field('hardcover_price') ): ?>
                             
-                                <li><i class="fas fa-dollar-sign"></i> <?php the_field('hardcover_price'); ?></li>
+                                <li><i class="fas fa-dollar-sign"></i> <b><?php the_field('hardcover_price'); ?></b> Hardcover Price</li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('paperback_price') ): ?>
                             
-                                <li><i class="fas fa-dollar-sign"></i> <?php the_field('paperback_price'); ?></li>
+                                <li><i class="fas fa-dollar-sign"></i> <b><?php the_field('paperback_price'); ?></b> Paperback Price</li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('ebook_price') ): ?>
                             
-                                <li><i class="fas fa-dollar-sign"></i> <?php the_field('ebook_price'); ?></li>
+                                <li><i class="fas fa-dollar-sign"></i> <b><?php the_field('ebook_price'); ?></b> eBook Price</li>
 
                             <?php endif; ?>
 
