@@ -11,7 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
+    <?php lantern_post_thumbnail(); ?>
+	
+    <header class="entry-header">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -29,10 +31,6 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<div class="content">
-		<?php the_content(); ?>
-	</div>
 
 	<footer class="entry-footer">
 		<?php lantern_entry_footer(); ?>

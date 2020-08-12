@@ -290,10 +290,6 @@ function lantern_register_widgets() {
 add_action( 'widgets_init', 'lantern_register_widgets' );
 
 
-// Theme support to add CSS to admin panel
-add_theme_support('editor-styles');
-add_editor_style('style-editor.css');
-
 // Add styles to core blocks
 /**
  * Gutenberg scripts and styles
