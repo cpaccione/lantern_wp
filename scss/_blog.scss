@@ -2,10 +2,17 @@
     background-image: url('../images/blog-hero@2x.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     height: 200px;
 
     @media (min-width: 800px) {
         height: 343px;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(000, 000, 000, .3);
     }
 }
 
@@ -92,6 +99,15 @@
         grid-template-areas: "sidebar main"; 
     }
 
+    .entry-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        .byline {
+            margin-left: 1rem;
+        }
+    }
+
     .col-sidebar {
         grid-area: sidebar;
     }
@@ -99,4 +115,15 @@
     .col-main {
         grid-area: main;
     }
+
+    .posted-on, .byline, .cat-links {
+        font-weight: bold;
+        font-size: 0.875rem;
+
+        a {
+            text-decoration: underline;
+            font-size: 0.875rem;
+        }
+    }
+
 }

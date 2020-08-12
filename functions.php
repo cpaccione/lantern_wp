@@ -156,6 +156,7 @@ function lantern_scripts() {
 
 	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/lantern.css', array(), '2.0', 'all');
 
+	wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/54b0c353c1.js', array(), '1.0', true);
 	wp_enqueue_script( 'bootstrap-bundle', get_template_directory_uri() . '/js/bootstrap.bundle.js', array('jquery'), '1.0', true);
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true);
 
@@ -315,3 +316,10 @@ function my_acf_fields_taxonomy_result( $text, $term, $field, $post_id ) {
     $text .= ' (' . $term->slug .  ')';
     return $text;
 }
+
+
+function ChangeSelectTitle($cat_args){
+	$cat_args['show_option_none'] = __('Select');
+	return $cat_args;
+	}
+	add_filter('custom_post_type_widgets/categories/widget_categories_dropdown_args', 'ChangeSelectTitle');
