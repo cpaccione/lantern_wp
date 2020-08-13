@@ -34,31 +34,31 @@ get_header();
 
                             <?php if( get_field('page_number') ): ?>
                             
-                                <li><i class="fas fa-book-open"></i> <?php the_field('page_number'); ?> pages</li>
+                                <li><i class="fas fa-book-open"></i>&nbsp;&nbsp; <?php the_field('page_number'); ?> pages</li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('book_size') ): ?>
                             
-                                <li><i class="fas fa-ruler-combined"></i> <?php the_field('book_size'); ?></li>
+                                <li><i class="fas fa-ruler-combined"></i>&nbsp;&nbsp; <?php the_field('book_size'); ?></li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('hardcover_price') ): ?>
                             
-                                <li><i class="fas fa-dollar-sign"></i> <b><?php the_field('hardcover_price'); ?></b> Hardcover Price</li>
+                                <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('hardcover_price'); ?></b> hardcover Price</li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('paperback_price') ): ?>
                             
-                                <li><i class="fas fa-dollar-sign"></i> <b><?php the_field('paperback_price'); ?></b> Paperback Price</li>
+                                <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('paperback_price'); ?></b> paperback Price</li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('ebook_price') ): ?>
                             
-                                <li><i class="fas fa-dollar-sign"></i> <b><?php the_field('ebook_price'); ?></b> eBook Price</li>
+                                <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('ebook_price'); ?></b> eBook Price</li>
 
                             <?php endif; ?>
 
@@ -82,7 +82,7 @@ get_header();
 
                             <?php if( get_field('book_format') ): ?>
                                 
-                                <li><i class="fas fa-book"></i> <?php the_field('book_format'); ?></li>
+                                <li><i class="fas fa-book"></i>&nbsp;&nbsp; <?php the_field('book_format'); ?></li>
 
                             <?php endif; ?>
 
