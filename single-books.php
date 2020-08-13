@@ -46,37 +46,43 @@ get_header();
 
                             <?php if( get_field('hardcover_price') ): ?>
                             
-                                <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('hardcover_price'); ?></b> hardcover Price</li>
+                                <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('hardcover_price'); ?></b> hardcover</li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('paperback_price') ): ?>
                             
-                                <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('paperback_price'); ?></b> paperback Price</li>
+                                <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('paperback_price'); ?></b> paperback</li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('ebook_price') ): ?>
                             
-                                <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('ebook_price'); ?></b> eBook Price</li>
+                                <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('ebook_price'); ?></b> eBook</li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('illustration_number') ): ?>
+                            
+                                <li><i class="fas fa-images"></i>&nbsp;&nbsp;<b>Illustrations</b>&nbsp;&nbsp;<?php the_field('illustration_number'); ?></li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('hardcover_isbn') ): ?>
                             
-                                <li><b>Hardcover ISBN</b> <?php the_field('hardcover_isbn'); ?></li>
+                                <li><b>Hardcover ISBN</b>&nbsp;&nbsp;<?php the_field('hardcover_isbn'); ?></li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('paperback_isbn') ): ?>
                                 
-                                <li><b>Paperback ISBN</b> <?php the_field('paperback_isbn'); ?></li>
+                                <li><b>Paperback ISBN</b>&nbsp;&nbsp;<?php the_field('paperback_isbn'); ?></li>
 
                             <?php endif; ?>
 
                             <?php if( get_field('ebook_isbn') ): ?>
                                 
-                                <li><b>eBook ISBN</b> <?php the_field('ebook_isbn'); ?></li>
+                                <li><b>eBook ISBN</b>&nbsp;&nbsp;<?php the_field('ebook_isbn'); ?></li>
 
                             <?php endif; ?>
 
