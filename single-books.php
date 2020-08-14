@@ -28,7 +28,34 @@ get_header();
                     <div class="book-title-wrap">
                         <h2 class="book-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></h2>
                         <p class="subtitle"><?php the_field('subtitle'); ?></p>
-                        <p class="author"><?php the_field('author'); ?></p>
+                    
+                        <!-- Start Repeater -->
+                        <?php if( have_rows('author_repeater')): // check for repeater fields ?>
+                            <ul class="author-list">
+
+                                <?php while ( have_rows('author_repeater')) : the_row(); // loop through the repeater fields ?>
+
+                                    <?php // set up post object
+                                        $post_object = get_sub_field('author');
+                                        if( $post_object ) :
+                                        $post = $post_object;
+                                        setup_postdata($post);
+                                        ?>
+
+                                        <li>
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php the_title(); ?>,
+                                            </a>
+                                        </li>
+
+                                    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+
+                                    <?php endif; ?> 
+
+                                <?php endwhile; ?>
+
+                            </ul>
+                        <?php endif; ?>
 
                         <ul class="book-meta">
 
@@ -119,36 +146,6 @@ get_header();
                                 endwhile; // End of the loop.
 
                             ?>
-
-                        
-                        <?php if( get_field('author_bio') ): ?>
-
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary author-button" data-toggle="modal" data-target="#staticBackdrop">
-                        Author Bio
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-lg">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel"><p class="author"><?php the_field('author'); ?></p></h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <?php the_field('author_bio'); ?>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <?php endif; ?>
 
                         <div class="purchase-options">
 
