@@ -33,28 +33,17 @@
                             <?php if( have_rows('author_repeater')): // check for repeater fields ?>
                                 <ul class="author-list">
 
-                                    <?php while ( have_rows('author_repeater')) : the_row(); // loop through the repeater fields ?>
+                                    <?php while ( have_rows('author_repeater')) : the_row(); // loop through the repeater fields
+                                    $link = get_sub_field('author_link');
+                                    $link_url = $link['url'];
+                                    $link_title = $link['title'];
+                                    $link_target = $link['target'] ? $link['target'] : '_self';
 
-                                        <?php // set up post object
-                                            $post_object = get_sub_field('author');
-                                            if( $post_object ) :
-                                            $post = $post_object;
-                                            setup_postdata($post);
-                                            ?>
-
-                                            <li id="author-index-<?php echo get_row_index(); ?>">
-                                                <a href="<?php the_permalink(); ?>">
-                                                    <?php if( get_row_index() > 1 ) {
-                                                        echo ' ,&nbsp; ';
-                                                    }
-                                                    ?>  
-                                                    <?php the_title(); ?>
-                                                </a>
-                                            </li>
-
-                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-
-                                        <?php endif; ?> 
+                                    ?>
+                            
+                                    <li>
+                                        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>&nbsp;
+                                    </li>
 
                                     <?php endwhile; ?>
 

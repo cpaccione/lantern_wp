@@ -27,9 +27,19 @@ if( !empty($block['align']) ) {
 $title = get_field('title_text');
 $text = get_field('sub_text');
 $image = get_field('hero_image');
+$bg_image = get_field('home_hero_bg');
 
 ?>
+<style>
+    .home-hero-wrap {
+        display: grid;
+    }
 
+    .col {
+        grid-column: 1;
+        grid-row: 1;
+    }
+</style>
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 
@@ -38,7 +48,14 @@ $image = get_field('hero_image');
     <div class="container-md">
         <div class="row">
             <div class="col-md-6 order-md-2">
-                <img class="home-hero-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                <div class="home-hero-wrap">
+                    <div class="col">
+                        <img class="home-hero-bg" src="<?php echo $bg_image['url']; ?>" alt="<?php echo $bg_image['alt']; ?>">
+                    </div>
+                    <div class="col">
+                        <img class="home-hero-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    </div>
+                </div>
             </div>
             <div class="col-md-6 order-md-1">
                 <h1><?php echo $title; ?></h1>

@@ -78,6 +78,10 @@
         margin: 0 auto;
         // text-align: center;
         max-width: 266px;
+
+        img {
+            border: 1px solid $grey;
+        }
     }
 
     .book-title-wrap {

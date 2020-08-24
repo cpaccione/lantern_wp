@@ -25,6 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'lantern' ); ?></a>
 
+<section class="header-section">
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -81,3 +82,4 @@
 			<i class="fas fa-search"></i>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+</section>

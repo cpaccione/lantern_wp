@@ -36,6 +36,10 @@
         max-width: 350px;
         margin: 0 auto;
         padding-bottom: 2rem;
+
+        img {
+            border: 1px solid $grey;
+        }
     }
 
     .book-title-wrap {
@@ -143,6 +147,7 @@
             max-width: 214px;
             display: block;
             margin: 0 auto;
+            border: 1px solid $grey;
         }
 
         p {

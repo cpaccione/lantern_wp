@@ -33,6 +33,48 @@
 
 							<div class="col-md-8">
 								<?php dynamic_sidebar('footer-5'); ?>
+								<ul class="social-media">
+									<li>
+										<a href="https://www.goodreads.com/user/show/1027933-lantern-publishing-media" target="_blank">
+											<span class="fa-stack" style="color: #ffffff;">
+												<i class="fas fa-circle fa-stack-2x"></i>
+												<i style="color: #0D88C1;" class="fab fa-goodreads-g fa-stack-1x"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/lanternpm/" target="_blank">
+											<span class="fa-stack" style="color: #ffffff;">
+												<i class="fas fa-circle fa-stack-2x"></i>
+												<i style="color: #0D88C1;" class="fab fa-facebook-f fa-stack-1x"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/lanternpm/" target="_blank">
+											<span class="fa-stack" style="color: #ffffff;">
+												<i class="fas fa-circle fa-stack-2x"></i>
+												<i style="color: #0D88C1;" class="fab fa-instagram fa-stack-1x"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="https://twitter.com/lanternpm" target="_blank">
+											<span class="fa-stack" style="color: #ffffff;">
+												<i class="fas fa-circle fa-stack-2x"></i>
+												<i style="color: #0D88C1;" class="fab fa-twitter fa-stack-1x"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.youtube.com/user/Lanternmedia"" target="_blank">
+											<span class="fa-stack" style="color: #ffffff;">
+												<i class="fas fa-circle fa-stack-2x"></i>
+												<i style="color: #0D88C1;" class="fab fa-youtube fa-stack-1x"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
 							</div>
 
 						</div>

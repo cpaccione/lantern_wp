@@ -3,6 +3,17 @@
     color: $white;
     padding: 4rem 0 4rem 0;
 
+    .social-media {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .fa-stack {
+            color: $white;
+        }
+    }
+
     .site-info {
         // max-width: 1140px;
         // margin: 0 auto;
