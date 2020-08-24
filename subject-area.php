@@ -13,7 +13,7 @@
                     $args = array(
                         'post_type' => 'books',
                         'post_status' => 'publish',
-                        'posts_per_page' => -1,
+                        'posts_per_page' => 10,
                         'orderby' => 'date',
                         'order' => 'DESC'
                         );
@@ -42,6 +42,20 @@
                             </div>
                         </a>
                     </div>
+
+                    <nav class="pagination">
+                        <?php
+                        $big = 999999999;
+                        echo paginate_links( array(
+                            'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+                            'format' => '?paged=%#%',
+                            'current' => max( 1, get_query_var('paged') ),
+                            'total' => $query->max_num_pages,
+                            'prev_text' => '&laquo;',
+                            'next_text' => '&raquo;'
+                        ) );
+                    ?>
+                    </nav>
 
                 <?php endwhile; endif; wp_reset_postdata(); ?>
 

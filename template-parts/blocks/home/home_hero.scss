@@ -23,9 +23,35 @@
       color: $grey;
     }
 
-    .home-hero-image {
-        position: relative;
-        top: -10%;
-    }
+    // .home-hero-image {
+    //     position: relative;
+    //     top: -10%;
+    // }
     
+
+    .home-hero-wrap {
+        display: grid;
+
+        .col {
+          grid-column: 1;
+          grid-row: 1;
+
+          .home-hero-bg {
+            position: relative;
+            top: -30px;
+
+            @media (min-width: 600px) {
+              top: -35px;
+            }
+
+            @media (min-width: 1100px) {
+              right: -62px;
+              top: -55px;
+            }
+          }
+      }
+    }
+
+
+
 }

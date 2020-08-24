@@ -41,9 +41,10 @@ Template Name: Subject
                     $args = array(
                         'post_type' => 'books',
                         'post_status' => 'publish',
-                        'posts_per_page' => -1,
+                        'posts_per_page' => 12,
                         'orderby' => 'date',
-                        'order' => 'DESC'
+                        'order' => 'DESC',
+                        'paged' => $paged
                         );
                     $query = new WP_Query($args);
 
@@ -70,8 +71,27 @@ Template Name: Subject
                             </div>
                         </a>
                     </div>
+                    
+                <?php endwhile; endif; ?>
 
-                <?php endwhile; endif; wp_reset_postdata(); ?>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="pagination paginate-subject">
+                            <?php
+                            $big = 999999999;
+                            echo paginate_links( array(
+                                'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+                                'format' => '?paged=%#%',
+                                'current' => max( 1, get_query_var('paged') ),
+                                'total' => $query->max_num_pages,
+                                'prev_text' => '<i class="fas fa-chevron-left"></i>',
+                                'next_text' => '<i class="fas fa-chevron-right"></i>'
+                            ) );
+                        ?>
+                    </nav>
+                    <?php wp_reset_postdata(); ?>
+                </div>
             </div>
         </div>
     </div>

@@ -30,16 +30,6 @@ $image = get_field('hero_image');
 $bg_image = get_field('home_hero_bg');
 
 ?>
-<style>
-    .home-hero-wrap {
-        display: grid;
-    }
-
-    .col {
-        grid-column: 1;
-        grid-row: 1;
-    }
-</style>
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 
