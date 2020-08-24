@@ -84,7 +84,7 @@
 
                                 <?php if( get_field('illustration_number') ): ?>
                                 
-                                    <li><i class="fas fa-images"></i>&nbsp;&nbsp;<b>Illustrations</b>&nbsp;&nbsp;<?php the_field('illustration_number'); ?></li>
+                                    <li><i class="fas fa-images"></i>&nbsp;&nbsp; <?php the_field('illustration_number'); ?></li>
 
                                 <?php endif; ?>
 
