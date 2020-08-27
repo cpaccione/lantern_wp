@@ -59,7 +59,7 @@ function lantern_book_taxonomies() {
 		'labels'            => $labels,
 		'show_ui'           => true,
 		'show_admin_column' => true,
-		'show_in_rest'			=> true,
+		'show_in_rest'		=> true,
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'book-category' ),
 	);
@@ -91,6 +91,7 @@ $args = array(
 	'labels'                => $labels,
 	'show_ui'               => true,
 	'show_admin_column'     => true,
+	'show_in_rest'		=> true,
 	'update_count_callback' => '_update_post_term_count',
 	'query_var'             => true,
 	'rewrite'               => array( 'slug' => 'book-tag' ),

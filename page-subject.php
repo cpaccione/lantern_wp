@@ -31,11 +31,11 @@ Template Name: Subject
     <div class="container-md">
         <div class="row">
         
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <?php dynamic_sidebar( 'sidebar-books' ); ?>
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-8" id="main-subject-area">
                 <?php
 
                     $args = array(
@@ -44,12 +44,14 @@ Template Name: Subject
                         'posts_per_page' => 12,
                         'orderby' => 'date',
                         'order' => 'DESC',
-                        'paged' => $paged
+                        'search_filter_id' => 856,
                         );
+                    // $args['search_filter_id'] = 855;
                     $query = new WP_Query($args);
 
                 ?>
                 <div class="row">
+
                 <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
                     <div class="col-md-4">
@@ -72,29 +74,35 @@ Template Name: Subject
                         </a>
                     </div>
                     
-                <?php endwhile; endif; ?>
-
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="pagination paginate-subject">
-                            <?php
-                            $big = 999999999;
-                            echo paginate_links( array(
-                                'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-                                'format' => '?paged=%#%',
-                                'current' => max( 1, get_query_var('paged') ),
-                                'total' => $query->max_num_pages,
-                                'prev_text' => '<i class="fas fa-chevron-left"></i>',
-                                'next_text' => '<i class="fas fa-chevron-right"></i>'
-                            ) );
-                        ?>
-                    </nav>
-                    <?php wp_reset_postdata(); ?>
+                    
+                <?php endwhile; ?>
                 </div>
+                <div class="row">
+    <div class="col-md-12">
+
+            <div class="pagination">
+            <?php
+            if (function_exists('wp_pagenavi')) 			{
+                wp_pagenavi( array('query' => $query ) );
+            }
+            ?>
             </div>
+            </div>
+</div>
+            
+           <?php endif; ?>
+
+           <?php wp_reset_postdata(); ?>
+ 
+
         </div>
     </div>
+
+
+
+      
+
+
 
 </section>
 
