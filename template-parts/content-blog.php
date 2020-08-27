@@ -14,10 +14,15 @@
     <div class="blog-wrap">
 
 		<div class="featured-image">
-			<?php lantern_post_thumbnail(); ?>
+			<?php get_sidebar(); ?>
 		</div>
 
         <div class="entry-content blog-preview">
+
+			<div class="featured-image">
+				<?php lantern_post_thumbnail(); ?>
+			</div>
+
 			<a class="title" href="<?php the_permalink(); ?>"><?php the_title('<h2>', '</h2>'); ?></a>
             <span class="entry-date"><?php echo get_the_date(); ?></span>
             <?php

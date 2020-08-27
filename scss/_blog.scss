@@ -30,13 +30,12 @@
         padding: 0 1rem 0 1rem;
 
         @media(min-width: 800px) {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 2fr;
             grid-gap: 2rem;
         }
 
-        .featured-image {
-            margin: 0 auto;
-        }
+        // .sidebar {
+        // }
 
         .blog-preview {
             padding: 2rem 1rem 0 1rem;
@@ -48,6 +47,10 @@
             h2 {
                 margin-bottom: 0;
                 line-height: 1.2;
+            }
+
+            .featured-image {
+                padding-bottom: 2rem;
             }
 
             .entry-date {
