@@ -13,10 +13,6 @@
 
     <div class="blog-wrap">
 
-		<div class="featured-image">
-			<?php get_sidebar(); ?>
-		</div>
-
         <div class="entry-content blog-preview">
 
 			<div class="featured-image">
@@ -24,7 +20,9 @@
 			</div>
 
 			<a class="title" href="<?php the_permalink(); ?>"><?php the_title('<h2>', '</h2>'); ?></a>
+
             <span class="entry-date"><?php echo get_the_date(); ?></span>
+
             <?php
             the_content();
 
@@ -35,6 +33,7 @@
                 )
             );
             ?>
+
             <a href="<?php the_permalink(); ?>" class="cta"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/link_graphic.svg" alt="link">Read More</a>
         </div><!-- .entry-content -->
     </div>
