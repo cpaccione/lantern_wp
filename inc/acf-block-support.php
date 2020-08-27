@@ -24,6 +24,11 @@ function register_acf_block_types() {
         'mode'              => 'edit',
         'post_types'        => array('page'),
         // 'icon'              => 'admin-comments',
+        'supports'          => array(
+            'align' => true,
+            'mode' => false,
+            'jsx' => true
+        ),
         'icon' => array(
             // Specifying a background color to appear with the icon e.g.: in the inserter.
             'background' => '#0D88C1',
