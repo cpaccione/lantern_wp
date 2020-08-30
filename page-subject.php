@@ -30,10 +30,11 @@ Template Name: Subject
 <section class="subject">
     
     <img class="pattern-six" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/pattern6.jpg" alt="pattern six">
+    <img class="pattern-four" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/pattern4.jpg" alt="pattern four">
+    <img class="pattern-six-repeat" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/pattern6.jpg" alt="pattern six repeat">
+    <img class="pattern-five" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/pattern5.jpg" alt="pattern five">
+    <img class="pattern-two" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/pattern2.jpg" alt="pattern two">
 
-    <div class="patter-four-wrap">
-        <img class="pattern-four" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/pattern4.jpg" alt="pattern four">
-    </div>
 
 
     <div class="container-md">

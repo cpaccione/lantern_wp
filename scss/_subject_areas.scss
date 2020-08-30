@@ -56,21 +56,36 @@
         width: 160px;
         position: absolute;
         left: -40px;
-        top: -105px;
+        top: -70px;
     }
 
-    .patter-four-wrap {
-        width: 50%;
+    .pattern-four {
         position: absolute;
-        overflow: hidden;
-
-        .pattern-four {
-            position: absolute;
-            width: 50%;
-        }
+        width: 100px;
+        right: -50px;
+        top: -15px;
     }
 
+    .pattern-six-repeat {
+        position: absolute;
+        width: 160px;
+        right: -50px;
+        bottom: 900px;
+    }
 
+    .pattern-five {
+        width: 160px;
+        position: absolute;
+        left: -40px;
+        bottom: 600px;
+    }
+
+    .pattern-two {
+        width: 100px;
+        position: absolute;
+        left: 200px;
+        bottom: 600px;
+    }
 
     a {
         text-decoration: none;
