@@ -53,9 +53,9 @@ Template Name: Subject
                         'posts_per_page' => 12,
                         'orderby' => 'date',
                         'order' => 'DESC',
-                        // 'search_filter_id' => 856,
+                        'search_filter_id' => 856,
                         );
-                    $args['search_filter_id'] = 855;
+                    // $args['search_filter_id'] = 855;
                     $query = new WP_Query($args);
 
                 ?>
