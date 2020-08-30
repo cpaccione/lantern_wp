@@ -28,6 +28,14 @@ Template Name: Subject
 		endwhile; // End of the loop.
 ?>
 <section class="subject">
+    
+    <img class="pattern-six" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/pattern6.jpg" alt="pattern six">
+
+    <div class="patter-four-wrap">
+        <img class="pattern-four" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/pattern4.jpg" alt="pattern four">
+    </div>
+
+
     <div class="container-md">
         <div class="row">
         

@@ -49,7 +49,28 @@
 }
 
 .subject {
+    position: relative;
     margin: 5rem 0 5rem 0;
+
+    .pattern-six {
+        width: 160px;
+        position: absolute;
+        left: -40px;
+        top: -105px;
+    }
+
+    .patter-four-wrap {
+        width: 50%;
+        position: absolute;
+        overflow: hidden;
+
+        .pattern-four {
+            position: absolute;
+            width: 50%;
+        }
+    }
+
+
 
     a {
         text-decoration: none;

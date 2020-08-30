@@ -16,19 +16,18 @@ function register_acf_block_types() {
         'name'              => 'two_column',
         'title'             => __('Two column block'),
         'description'       => __('The block has text on the left and an image on the right with a section title above which is underlined.'),
-        'render_template'   => 'template-parts/blocks/two_column/two_column.php',
-        'enqueue_assets'    => function() {
-            wp_enqueue_style( 'lantern-two-column', get_template_directory_uri() . '/template-parts/blocks/two_column/two_column.css', array(), '1.0', 'all' );
-        },
         'category'          => 'common',
-        'mode'              => 'edit',
         'post_types'        => array('page'),
         // 'icon'              => 'admin-comments',
         'supports'          => array(
             'align' => true,
             'mode' => false,
-            'jsx' => true
+            'jsx' => true,
         ),
+        'render_template'   => 'template-parts/blocks/two_column/two_column.php',
+        'enqueue_assets'    => function() {
+            wp_enqueue_style( 'lantern-two-column', get_template_directory_uri() . '/template-parts/blocks/two_column/two_column.css', array(), '1.0', 'all' );
+        },
         'icon' => array(
             // Specifying a background color to appear with the icon e.g.: in the inserter.
             'background' => '#0D88C1',
