@@ -27,7 +27,20 @@ body {
     padding: 0 1.5rem 0 1.5rem;  
 }
 
+.is-style-max-width-650 {
+    max-width: 650px;
+    margin: 0 auto 1rem auto;
+    padding: 0 1.5rem 0 1.5rem;  
+}
+
 .is-style-1200-yellow {
     background-image: url('../images/circle_two_graphic.svg');
     background-repeat: no-repeat;
+}
+
+// Give Embed Form Styles
+
+.give-embed-form {
+    max-width: 650px !important;
+    background-color: red !important;
 }
