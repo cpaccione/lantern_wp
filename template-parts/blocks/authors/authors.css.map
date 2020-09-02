@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,aAAc,CACV,UAAU,CAAE,MAAM,CAClB,aAAa,CAAE,MAAM,CAErB,gBAAG,CACC,SAAS,CAAE,QAAQ,CACnB,KAAK,CCLL,OAAO,CDMP,cAAc,CAAE,SAAS,CACzB,UAAU,CAAE,MAAM,CAClB,aAAa,CAAE,iBAAqB,CACpC,OAAO,CAAE,MAAM,CACf,UAAU,CAAE,MAAM,CAClB,MAAM,CAAE,MAAM",
+"sources": ["authors.scss","../../../scss/_vars.scss"],
+"names": [],
+"file": "authors.css"
+}

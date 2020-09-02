@@ -25,49 +25,43 @@ if( !empty($block['align']) ) {
 }
 
 $cat = get_field('category');
-// $section_title = get_field('section_title');
+$section_title = get_field('section_title');
 ?>
 
 
-<div class="authors">
+    <div class="authors">
 
-    <!-- <div class="section-title">
-        <h2><?php //echo $section_title; ?></h2>
-    </div> -->
+        <?php
 
-    <div class="container">
-        <div class="row">
+            $args = array(
+                'post_type' => 'book-authors',
+                'post_status' => 'publish',
+                // 'book_category' => 'featured',
+                'posts_per_page' => -1,
+                'orderby' => 'name',
+                'order' => 'ASC',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'author_category',
+                        'terms' => $cat,
+                    ),
+                ),
+                );
+            $query = new WP_Query($args);
+            
+        ?>
 
-                <?php
-
-                    $args = array(
-                        'post_type' => 'book-authors',
-                        'post_status' => 'publish',
-                        // 'book_category' => 'featured',
-                        'posts_per_page' => -1,
-                        'orderby' => 'name',
-                        'order' => 'ASC',
-                        'tax_query' => array(
-                            array(
-                                'taxonomy' => 'author_category',
-                                'terms' => $cat,
-                            ),
-                        ),
-                        );
-                    $query = new WP_Query($args);
-                    
-                ?>
-
-                        <ul>
-                <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
-
-
-                    <li class="book-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-
-                <?php endwhile; endif; wp_reset_postdata(); ?>
-                </ul>
-
-            </div>
+        <div class="author-title">
+            <h3><?php echo $section_title; ?></h3>
         </div>
+
+        <ul>
+            <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+
+                <li class="book-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+
+            <?php endwhile; endif; wp_reset_postdata(); ?>
+        </ul>
+
     </div>
     
