@@ -1,5 +1,5 @@
 .blog-hero {
-    // background-image: url('../images/blog-hero@2x.png');
+    background-image: url('../images/blog-hero@2x.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -22,6 +22,8 @@
 
 .blog-main {
     margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 // .post {

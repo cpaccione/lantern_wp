@@ -193,4 +193,30 @@ function register_acf_block_types() {
             
         ));
 
+
+        // register a book author post type
+        acf_register_block_type(array(
+            'name'              => 'author_post_type',
+            'title'             => __('Author post type'),
+            'description'       => __('The block displays the Lantern hero.'),
+            'render_template'   => 'template-parts/blocks/authors/authors.php',
+            'enqueue_assets'    => function() {
+                wp_enqueue_style( 'book-post-type', get_template_directory_uri() . '/template-parts/blocks/authors/authors.css', array(), '1.1', 'all' );
+            },
+            'category'          => 'common',
+            'mode'              => 'edit',
+            'post_types'        => array('page'),
+            // 'icon'              => 'admin-comments',
+            'icon' => array(
+                // Specifying a background color to appear with the icon e.g.: in the inserter.
+                'background' => '#0D88C1',
+                // Specifying a color for the icon (optional: if not set, a readable color will be automatically defined)
+                'foreground' => '#ffffff',
+                // Specifying a dashicon for the block
+                'src' => 'admin-comments',
+                ),
+            'keywords'          => array( 'Lantern', 'Authors' ),
+            
+        ));
+
 }

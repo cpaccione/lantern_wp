@@ -17,7 +17,7 @@ get_header();
 
 
 
-	<div class="blog-hero" style="background-image: url('<?php echo get_field('blog_hero_image'); ?>');"></div>
+	<div class="blog-hero"></div>
 	
 
 
@@ -34,8 +34,8 @@ get_header();
 		<?php
 
 			$args = array('post_type' => 'post');
-			// $args['search_filter_id'] = 894;
-			$args['search_filter_id'] = 861;
+			$args['search_filter_id'] = 894;
+			// $args['search_filter_id'] = 861;
 			$query = new WP_Query($args);
 
 			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();   
