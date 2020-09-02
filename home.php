@@ -16,7 +16,12 @@ get_header();
 ?>
 
 
-    <div class="blog-hero"></div>
+
+	<div class="blog-hero" style="background-image: url('<?php echo get_field('blog_hero_image'); ?>');"></div>
+	
+
+
+<?php the_field('hero_image'); ?>
 
 	<section class="blog-section">
 
