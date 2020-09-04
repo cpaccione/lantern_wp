@@ -55,12 +55,14 @@ $section_title = get_field('section_title');
             <h3><?php echo $section_title; ?></h3>
         </div>
 
-        <ul>
+        <ul class="author-list">
+
             <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
-                <li class="book-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <li class="author-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 
             <?php endwhile; endif; wp_reset_postdata(); ?>
+
         </ul>
 
     </div>
