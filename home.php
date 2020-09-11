@@ -16,17 +16,13 @@ get_header();
 ?>
 
 
-
-	<div class="blog-hero"></div>
+	<div class="blog-hero" style="background-image: url('<?php the_field('blog_hero', 7); ?>');"></div>
 	
-
-
-<?php the_field('hero_image'); ?>
 
 	<section class="blog-section">
 
 		<div class="blog-sidebar">
-				<?php get_sidebar(); ?>
+			<?php get_sidebar(); ?>
 		</div>
 
 		<main id="primary" class="site-main blog-main">
