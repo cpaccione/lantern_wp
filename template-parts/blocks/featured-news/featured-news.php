@@ -31,9 +31,9 @@ $content = get_field('description');
 $title_col_one = get_field('title_col_one');
 $content_col_one = get_field('description_col_one');
 $title_col_two = get_field('title_col_two');
-$content_col_two = get_field('description_col_one');
+$content_col_two = get_field('description_col_two');
 $title_col_three = get_field('title_col_three');
-$content_col_three = get_field('description_col_one');
+$content_col_three = get_field('description_col_three');
 
 ?>
 

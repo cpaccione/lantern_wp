@@ -15,10 +15,8 @@
 get_header();
 ?>
 
-
 	<div class="blog-hero" style="background-image: url('<?php the_field('blog_hero', 7); ?>');"></div>
 	
-
 	<section class="blog-section">
 
 		<div class="blog-sidebar">
