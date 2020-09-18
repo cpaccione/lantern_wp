@@ -47,6 +47,10 @@ if ( ! function_exists( 'lantern_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
+		add_action( 'after_setup_theme', function() {
+			add_theme_support( 'woocommerce' );
+		} );
+		
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
@@ -289,6 +293,18 @@ function lantern_register_widgets() {
 
 }
 add_action( 'widgets_init', 'lantern_register_widgets' );
+
+
+function lantern_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'lantern_add_woocommerce_support' );
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 60 );
+
+//add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 
 // Add styles to core blocks
