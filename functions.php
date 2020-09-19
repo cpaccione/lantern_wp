@@ -147,7 +147,7 @@ add_action( 'widgets_init', 'lantern_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lantern_scripts() {
-	wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css', array(), '1.0', 'all' );
+	// wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css', array(), '1.0', 'all' );
 
 	wp_enqueue_style( 'montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap', array(), '1.0', 'all');
 
@@ -336,6 +336,3 @@ function ChangeSelectTitle($cat_args){
 	return $cat_args;
 	}
 	add_filter('custom_post_type_widgets/categories/widget_categories_dropdown_args', 'ChangeSelectTitle');
-
-
-// do_action("search_filter_query_posts", 861);
