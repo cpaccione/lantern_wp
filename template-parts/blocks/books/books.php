@@ -36,8 +36,8 @@ $section_title = get_field('section_title');
         <h2><?php echo $section_title; ?></h2>
     </div>
 
-    <div class="container">
-        <div class="row">
+    <div class="book-container">
+        <!-- <div class="row"> -->
 
                 <?php
 
@@ -61,7 +61,7 @@ $section_title = get_field('section_title');
 
                 <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
-                    <div class="col-md-4">
+                    <div class="book-col">
                         <a href="<?php the_permalink(); ?>">
                             <div class="book-wrap">
                                 
@@ -83,7 +83,27 @@ $section_title = get_field('section_title');
 
                 <?php endwhile; endif; wp_reset_postdata(); ?>
 
-            </div>
+            <!-- </div> -->
         </div>
     </div>
     
+
+    <style>
+        .book-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 2rem;
+        }
+
+        @media (min-width: 600px) {
+            .book-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 800px) {
+            .book-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>

@@ -39,19 +39,20 @@ $content_col_three = get_field('description_col_three');
 
 
 <div class="news-featured">
-        <div class="container-md">
+        <!-- <div class="container-md"> -->
             
-            <div class="row">
-                <div class="col-md-12">
+            <!-- <div class="row"> -->
+                <!-- <div class="col-md-12"> -->
                     <div class="section-title">
                         <h2>news, events &amp; podcasts</h2>
                     </div>
-                </div>
-            </div>
+                <!-- </div> -->
+            <!-- </div> -->
 
             <!-- <div class="featured-item"> -->
-                <div class="row">
-                    <div class="col-lg-6 col-xl-4">
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-lg-6 col-xl-4"> -->
+                        <div class="featured-item">
                         <div class="circle-wrap">
                             <img class="design-element" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/graphic_one.svg" alt="design element">
                             <div class="content">
@@ -59,8 +60,8 @@ $content_col_three = get_field('description_col_three');
                                 <p class="title"><?php echo $title; ?></p>   
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-8 d-flex align-items-center">
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-6 col-xl-8 d-flex align-items-center"> -->
                         <div class="wrap">
                             <p><?php echo $content; ?></p>
                             <?php 
@@ -85,8 +86,9 @@ $content_col_three = get_field('description_col_three');
                                 <a class="cta" href="<?php echo esc_url( $ha_url ); ?>" target="<?php echo esc_attr( $ha_target ); ?>"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/audio.svg" alt="link"><?php echo esc_html( $ha_title ); ?></a>
                             <?php endif; ?>
                         </div>
-                    </div>
-                </div>
+                        </div>
+                    <!-- </div> -->
+                <!-- </div> -->
             <!-- </div> -->
 
             <div class="featured-grid">
