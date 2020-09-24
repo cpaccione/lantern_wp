@@ -166,8 +166,9 @@ $content_col_three = get_field('description_col_three');
                             <?php endif; ?>
                             </div>
                         </div>
+
                     </div>
-                </div>
+                <!-- </div> -->
             <!-- </div> -->
 
         </div>

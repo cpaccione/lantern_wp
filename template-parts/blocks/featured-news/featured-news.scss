@@ -140,15 +140,13 @@
 
 .featured-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 2rem;
+    grid-template-columns: 1fr;
     margin-top: 4rem;
 
-    // @media(min-width: 992px) {
-    //     display: grid;
-    //     grid-template-columns: 1fr 1fr 1fr;
-    //     grid-gap: 5rem;
-    // }
+    @media(min-width: 992px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
 
     .news-wrap {
 
