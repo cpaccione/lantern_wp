@@ -80,8 +80,8 @@ $content_col_three = get_field('description_col_three');
 
             <div class="featured-grid">
                 <!-- <div class="container-md"> -->
-                    <div class="row">
-                        <div class="col-lg-4">
+                    <!-- <div class="row"> -->
+                        <div class="col">
                             <div class="news-wrap">
                             <h2 class="title"><?php echo $title_col_one; ?></h2>
                             <p><?php echo $content_col_one; ?></p>
@@ -110,7 +110,7 @@ $content_col_three = get_field('description_col_three');
                             </div>
                         </div>
 
-                        <div class="col-lg-4">
+                        <div class="col">
                             <div class="news-wrap">
                             <h2 class="title"><?php echo $title_col_two; ?></h2>
                             <p><?php echo $content_col_two; ?></p>
@@ -138,7 +138,7 @@ $content_col_three = get_field('description_col_three');
                             </div>
                         </div>
 
-                        <div class="col-lg-4">
+                        <div class="col">
                             <div class="news-wrap">
                             <h2 class="title"><?php echo $title_col_three; ?></h2>
                             <p><?php echo $content_col_three; ?></p>
