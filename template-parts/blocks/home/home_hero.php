@@ -35,9 +35,9 @@ $bg_image = get_field('home_hero_bg');
 
     <img class="circle-graphic" src="<?php echo esc_url(get_template_directory_uri() ); ?>/images/circle_graphic.svg" alt="circle graphic">
 
-    <div class="container-md">
-        <div class="row">
-            <div class="col-md-6 order-md-2">
+    <!-- <div class="l-container">
+        <div class="home-hero"> -->
+            <div class="col">
                 <div class="home-hero-wrap">
                     <div class="col">
                         <img class="home-hero-bg" src="<?php echo $bg_image['url']; ?>" alt="<?php echo $bg_image['alt']; ?>">
@@ -47,11 +47,11 @@ $bg_image = get_field('home_hero_bg');
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 order-md-1">
+            <div class="col">
                 <h1><?php echo $title; ?></h1>
                 <p><?php echo $text; ?></p>
             </div>
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 
 </div>
