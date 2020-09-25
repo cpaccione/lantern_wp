@@ -1,16 +1,14 @@
 @import '../../../scss/vars';
 
 .home-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   position: relative;
   margin-top: 6rem;
-  
-  .circle-graphic {
-    position: absolute;
-    left: -60px;
-    z-index: -100;
-  }
+
+    .circle-graphic {
+      position: absolute;
+      left: -60px;
+      z-index: -100;
+    }
 
     h1 {
       color: $light-blue;
