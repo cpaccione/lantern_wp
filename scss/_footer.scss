@@ -34,9 +34,13 @@
         }
 
         .last-column {
-            // display: grid;
+            display: grid;
             // grid-gap: 2rem;
-            // grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr;
+
+            @media (min-width: 1200px) {
+                grid-template-columns: 1fr 2fr;
+            }
 
             h2 {
                 color: $white;
@@ -62,4 +66,18 @@
             }
         }
     }
+}
+
+.site-info {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 800px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (min-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+    }
+
 }

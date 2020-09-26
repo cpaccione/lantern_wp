@@ -12,26 +12,30 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<div class="container-main">
+
 		<div class="site-info">
-			<div class="container-md">
-				<div class="row">
-					<div class="col-md-3">
+			<!-- <div class="container-md">
+				<div class="row"> -->
+
+					<div class="col">
 						<?php dynamic_sidebar('footer-1'); ?>
 					</div>
-					<div class="col-md-2">
+
+					<div class="col">
 						<?php dynamic_sidebar('footer-2'); ?>
 					</div>
-					<div class="col-md-2">
+					<div class="col">
 						<?php dynamic_sidebar('footer-3'); ?>
 					</div>
-					<div class="col-md-5 last-column">
-						<div class="row">
+					<div class="col last-column">
+						<!-- <div class="row"> -->
 
-							<div class="col-md-4">
+							<div class="col">
 								<?php dynamic_sidebar('footer-4'); ?>
 							</div>
 
-							<div class="col-md-8">
+							<div class="col">
 								<?php dynamic_sidebar('footer-5'); ?>
 								<ul class="social-media">
 									<li>
@@ -79,11 +83,12 @@
 
 						</div>
 
-						</div>
+						<!-- </div>
 					</div>
 				</div>
-			</div>
-		</div><!-- .site-info -->
+			</div> -->
+			</div><!-- .site-info -->
+		</div> <!-- .container-main -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
