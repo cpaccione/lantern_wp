@@ -9,11 +9,12 @@
 
     get_header();
     ?>
+    <div class="container-main">
         <div class="single-book-grid">
-            <div class="container-md">
-                <div class="row">
+            <!-- <div class="container-md">
+                <div class="row"> -->
 
-                    <div class="col-md-5">
+                    <div class="col book-image-column">
                         <div class="single-book-hero">
                             <?php
 
@@ -24,7 +25,8 @@
                             ?>   
                         </div>
                     </div>
-                    <div class="col-md-7">
+
+                    <div class="col book-info-column">
                         <div class="book-title-wrap">
                             <h2 class="book-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></h2>
                             <p class="subtitle"><?php the_field('subtitle'); ?></p>
@@ -170,16 +172,18 @@
 
                                 </div>
                             </div>
-                        </div>   
-                    </div>
-                </div>
-            </div>
+                        </div> <!-- Book Info Column -->   
 
+                    <!-- </div> -->
+                <!-- </div> -->
+
+            </div> <!-- Single Book Grid end -->
+        </div>
 
 
                 <!-- Start Repeater -->
                 <?php if( have_rows('related_book_repeater')): // check for repeater fields ?>
-                    <div class="container-lg">
+                    <div class="container-main">
 
                         <div class="row">
                             <div class="col-12">
@@ -191,7 +195,7 @@
 
 
                         <div class="related-book-grid">
-                            <div class="row">
+                            <!-- <div class="row"> -->
 
                             <?php while ( have_rows('related_book_repeater')) : the_row(); // loop through the repeater fields ?>
 
@@ -202,7 +206,7 @@
                                     setup_postdata($post);
                                     ?>
                                 
-                                    <div class="col-lg-3">
+                                    <div class="col">
 
                                         <div class="related-book"> 
 
@@ -222,7 +226,9 @@
                             <?php endwhile; ?>
                     <!-- End Repeater -->
                     </div>
-                </div>
+                <!-- </div> -->
                 <?php endif; ?>
                 </div>
+
+
     <?php get_footer(); ?>

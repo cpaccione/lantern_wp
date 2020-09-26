@@ -15,9 +15,6 @@
 		<div class="container-main">
 
 		<div class="site-info">
-			<!-- <div class="container-md">
-				<div class="row"> -->
-
 					<div class="col">
 						<?php dynamic_sidebar('footer-1'); ?>
 					</div>
@@ -29,7 +26,6 @@
 						<?php dynamic_sidebar('footer-3'); ?>
 					</div>
 					<div class="col last-column">
-						<!-- <div class="row"> -->
 
 							<div class="col">
 								<?php dynamic_sidebar('footer-4'); ?>
@@ -82,11 +78,6 @@
 							</div>
 
 						</div>
-
-						<!-- </div>
-					</div>
-				</div>
-			</div> -->
 			</div><!-- .site-info -->
 		</div> <!-- .container-main -->
 	</footer><!-- #colophon -->
