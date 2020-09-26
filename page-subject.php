@@ -36,14 +36,14 @@ Template Name: Subject
 
 
 
-    <div class="container-md">
-        <div class="row">
+    <div class="container-main">
+        <div class="subject-grid">
         
-            <div class="col-md-4">
+            <div class="sidebar">
                 <?php dynamic_sidebar( 'sidebar-books' ); ?>
             </div>
 
-            <div class="col-md-8" id="main-subject-area">
+            <div class="main-subject-area" id="main-subject-area">
                 <?php
 
                     $args = array(
@@ -58,11 +58,11 @@ Template Name: Subject
                     $query = new WP_Query($args);
 
                 ?>
-                <div class="row">
+
 
                 <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
-                    <div class="col-md-4">
+
                         <a href="<?php the_permalink(); ?>">
                             <div class="book-wrap">
                                 
@@ -80,30 +80,25 @@ Template Name: Subject
                                 
                             </div>
                         </a>
-                    </div>
-                    
-                    
-                <?php endwhile; ?>
+                    <?php endwhile; ?>
                 </div>
-                <div class="row">
-    <div class="col-md-12">
 
-            <div class="pagination">
+
+                <?php endif; ?>
+
+           <?php wp_reset_postdata(); ?>
+
+        </div>
+
+        <div class="pagination">
             <?php
+
             if (function_exists('wp_pagenavi')) 			{
                 wp_pagenavi( array('query' => $query ) );
             }
+
             ?>
-            </div>
-            </div>
-</div>
-            
-           <?php endif; ?>
-
-           <?php wp_reset_postdata(); ?>
- 
-
-        </div>
+        </div>     
     </div>
 
 
