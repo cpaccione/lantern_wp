@@ -146,18 +146,10 @@
         }
 
         img {
-            max-width: 200px;
+            max-width: 75%;
             display: block;
             margin: 0 auto;
             border: 1px solid $grey;
-
-            @media (min-width: 600px) {
-                max-width: 225px;
-            }
-
-            @media (min-width: 800px) {
-                max-width: 300px;
-            }
         }
 
         p {
