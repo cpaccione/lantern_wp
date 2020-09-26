@@ -30,10 +30,8 @@ $s_title = get_field('title');
 
 ?>
 
-    <div class="container">
-
+    <div class="container-l">
         <div class="section-title">
             <h2><?php echo $s_title; ?></h2>
         </div>
-
     </div>

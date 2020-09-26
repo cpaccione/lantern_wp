@@ -84,7 +84,7 @@ $section_title = get_field('section_title');
                 <?php endwhile; endif; wp_reset_postdata(); ?>
 
             <!-- </div> -->
-        </div>
+        <!-- </div> -->
     </div>
     
 
