@@ -9,59 +9,60 @@
 
 get_header();
 ?>
-    <div class="single-book-grid">
-        <div class="container-md">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="single-book-hero">
-                        <?php
+    <div class="container-main">
+        <div class="single-book-grid">
 
-                            if ( has_post_thumbnail() ) {
-                                the_post_thumbnail('large');
-                            }
+            <div class="col">
+                <div class="single-book-hero">
+                    <?php
 
-                        ?>   
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="book-title-wrap">
-                        <h2 class="book-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></h2>
-                        <div class="editor">
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail('large');
+                        }
 
-                            <?php
-
-                                while ( have_posts() ) :
-                                    
-                                    the_post();
-
-                                    get_template_part( 'template-parts/content', 'book' );
-
-                                endwhile; // End of the loop.
-
-                            ?>
-                            </div>
-                        </div>
-                    </div>   
+                    ?>   
                 </div>
             </div>
+
+            <div class="col">
+                <div class="book-title-wrap">
+                    <h2 class="book-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></h2>
+                    <div class="editor">
+
+                        <?php
+
+                            while ( have_posts() ) :
+                                
+                                the_post();
+
+                                get_template_part( 'template-parts/content', 'book' );
+
+                            endwhile; // End of the loop.
+
+                        ?>
+                    </div>
+                </div>
+            </div> 
+
         </div>
+    </div>
 
 
              <!-- Start Repeater -->
             <?php if( have_rows('related_book_repeater')): // check for repeater fields ?>
-                <div class="container-lg">
+                <div class="container-main">
 
-                    <div class="row">
-                        <div class="col-12">
+                    <!-- <div class="row">
+                        <div class="col-12"> -->
                             <div class="section-title">
                                 <h2><?php the_field('section_title'); ?></h2>
                             </div>
-                        </div>
-                    </div>
+                        <!-- </div>
+                    </div> -->
 
 
                     <div class="related-book-grid">
-                        <div class="row">
+                        <!-- <div class="row"> -->
 
                         <?php while ( have_rows('related_book_repeater')) : the_row(); // loop through the repeater fields ?>
 
@@ -72,7 +73,7 @@ get_header();
                                 setup_postdata($post);
                                 ?>
                             
-                                <div class="col-lg-3">
+                                <div class="col">
 
                                     <div class="related-book"> 
 
@@ -91,9 +92,11 @@ get_header();
 
                         <?php endwhile; ?>
                 <!-- End Repeater -->
-                </div>
-            </div>
-            <?php endif; ?>
+                <!-- </div> -->
+                    </div>
+
+                <?php endif; ?>
+
             </div>
 
 <?php get_footer(); ?>
