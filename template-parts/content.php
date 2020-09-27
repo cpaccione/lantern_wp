@@ -24,7 +24,7 @@
 			<div class="entry-meta">
 				<?php
 				lantern_posted_on();
-				lantern_posted_by();
+				//lantern_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
