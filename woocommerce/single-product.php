@@ -57,7 +57,6 @@ get_header( 'shop' ); ?>
 		//do_action( 'woocommerce_sidebar' );
 	?>
     </div>
-
 <?php
 get_footer( 'shop' );
 
