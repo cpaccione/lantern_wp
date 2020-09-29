@@ -77,10 +77,15 @@
     position: relative;
     margin: 5rem 0 5rem 0;
 
-    .pagination {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    .paginate {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: center;
+
+        .wp-pagenavi {
+            display: flex;
+            flex-direction: row;
+        }
     }
 
     .pattern-six {

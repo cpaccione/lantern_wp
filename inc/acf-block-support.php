@@ -124,7 +124,7 @@ function register_acf_block_types() {
             'description'       => __('The block displays the Lantern hero.'),
             'render_template'   => 'template-parts/blocks/home/home_hero.php',
             'enqueue_assets'    => function() {
-                wp_enqueue_style( 'lantern-hero', get_template_directory_uri() . '/template-parts/blocks/home/home_hero.css', array(), '1.3', 'all' );
+                wp_enqueue_style( 'lantern-hero', get_template_directory_uri() . '/template-parts/blocks/home/home_hero.css', array(), '1.4', 'all' );
             },
             'category'          => 'common',
             'mode'              => 'edit',
@@ -149,7 +149,7 @@ function register_acf_block_types() {
             'description'       => __('The block displays the Lantern hero.'),
             'render_template'   => 'template-parts/blocks/books/books.php',
             'enqueue_assets'    => function() {
-                wp_enqueue_style( 'book-post-type', get_template_directory_uri() . '/template-parts/blocks/books/books.css', array(), '1.1', 'all' );
+                wp_enqueue_style( 'book-post-type', get_template_directory_uri() . '/template-parts/blocks/books/books.css', array(), '1.2', 'all' );
             },
             'category'          => 'common',
             'mode'              => 'edit',
@@ -175,7 +175,7 @@ function register_acf_block_types() {
             'description'       => __('The block displays the featured news section.'),
             'render_template'   => 'template-parts/blocks/featured-news/featured-news.php',
             'enqueue_assets'    => function() {
-                wp_enqueue_style( 'featured-news', get_template_directory_uri() . '/template-parts/blocks/featured-news/featured-news.css', array(), '1.1', 'all' );
+                wp_enqueue_style( 'featured-news', get_template_directory_uri() . '/template-parts/blocks/featured-news/featured-news.css', array(), '1.2', 'all' );
             },
             'category'          => 'common',
             'mode'              => 'edit',
@@ -201,7 +201,7 @@ function register_acf_block_types() {
             'description'       => __('The block displays the Lantern hero.'),
             'render_template'   => 'template-parts/blocks/authors/authors.php',
             'enqueue_assets'    => function() {
-                wp_enqueue_style( 'author-post-type', get_template_directory_uri() . '/template-parts/blocks/authors/authors.css', array(), '1.1', 'all' );
+                wp_enqueue_style( 'author-post-type', get_template_directory_uri() . '/template-parts/blocks/authors/authors.css', array(), '1.2', 'all' );
             },
             'category'          => 'common',
             'mode'              => 'edit',

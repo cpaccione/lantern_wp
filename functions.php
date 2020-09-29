@@ -159,7 +159,7 @@ function lantern_scripts() {
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.13.1/css/all.css', array(), '1.0', 'all');
 
 	// Main CSS file
-	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/lantern.css', array(), '4.5', 'all');
+	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/lantern.css', array(), '5.0', 'all');
 
 	wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/54b0c353c1.js', array(), '1.0', true);
 	//wp_enqueue_script( 'bootstrap-bundle', get_template_directory_uri() . '/js/bootstrap.bundle.js', array('jquery'), '1.0', true);

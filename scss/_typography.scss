@@ -89,3 +89,15 @@ a {
     display: block;
     text-align: center;
 }
+
+.btn-success {
+    background-color: #008a00;
+    color: white;
+    padding: .5rem 2rem .5rem 2rem;
+    border-radius: 36px;
+
+    &:hover {
+        background-color: #00eb00;
+        color: $white;
+    }
+}

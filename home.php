@@ -43,6 +43,14 @@ get_header();
 
 				endwhile; // End of the loop. ?>
 
+				<div class="pagination">
+					<?php
+					if (function_exists('wp_pagenavi')) 			{
+						wp_pagenavi( array('query' => $query ) );
+					}
+					?>
+				</div>
+
 			<?php endif;
 
 
@@ -54,13 +62,7 @@ get_header();
 				
 	</section>
 
-		<div class="pagination">
-			<?php
-			if (function_exists('wp_pagenavi')) 			{
-				wp_pagenavi( array('query' => $query ) );
-			}
-			?>
-		</div>
+
 
 <?php
 get_footer();
