@@ -52,8 +52,9 @@ body {
 }
 
 .pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 4rem 0 4rem 0;
+    margin: 1rem 0 4rem 0;
+}
+
+.wp-pagenavi {
+    margin: 1rem 0 4rem 0;
 }

@@ -43,26 +43,23 @@ get_header();
 
 				endwhile; // End of the loop. ?>
 
-				<div class="pagination">
-					<?php
-					if (function_exists('wp_pagenavi')) 			{
-						wp_pagenavi( array('query' => $query ) );
-					}
-					?>
-				</div>
+			<?php endif; ?>
 
-			<?php endif;
+				</main><!-- #main -->
+				</section>
 
+				<div class="container-main">
 
-			wp_reset_postdata(); 
+						<?php
+						
+							if (function_exists('wp_pagenavi')) {
+								wp_pagenavi( array('query' => $query ) );
+							}
+						
+						?>
 
-		?>
+				</div>	
 
-		</main><!-- #main -->
-				
-	</section>
+			<?php wp_reset_postdata(); ?>
 
-
-
-<?php
-get_footer();
+	<?php get_footer();
