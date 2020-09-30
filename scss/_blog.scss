@@ -23,7 +23,11 @@
 .blog-main {
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+
+    @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // .post {
