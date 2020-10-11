@@ -52,6 +52,34 @@
                                 </ul>
                             <?php endif; ?>
 
+                            <div class="purchase-options">
+
+                                <?php if(get_field('purchase_options') ): ?>
+
+                                    <h2><?php the_field('purchase_title'); ?></h2>
+
+                                <?php endif; ?>
+
+                                <?php if( have_rows('purchase_options') ): ?>
+
+                                    <?php while( have_rows('purchase_options') ): the_row(); ?>
+
+                                    <?php 
+                                        $link = get_sub_field('purchase_link');
+                                        if( $link ): 
+                                            $link_url = $link['url'];
+                                            $link_title = $link['title'];
+                                            $link_target = $link['target'] ? $link['target'] : '_self';
+                                            ?>
+                                            <a class="btn btn-success" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                                        <?php endif; ?>
+
+                                    <?php endwhile; ?>
+
+                                <?php endif; ?>
+
+                            </div>
+
                             <ul class="book-meta">
 
                                 <?php if( get_field('page_number') ): ?>
@@ -141,34 +169,6 @@
                                     endwhile; // End of the loop.
 
                                 ?>
-
-                            <div class="purchase-options">
-
-                                <?php if(get_field('purchase_options') ): ?>
-
-                                    <h2><?php the_field('purchase_title'); ?></h2>
-
-                                <?php endif; ?>
-
-                                <?php if( have_rows('purchase_options') ): ?>
-
-                                    <?php while( have_rows('purchase_options') ): the_row(); ?>
-
-                                    <?php 
-                                        $link = get_sub_field('purchase_link');
-                                        if( $link ): 
-                                            $link_url = $link['url'];
-                                            $link_title = $link['title'];
-                                            $link_target = $link['target'] ? $link['target'] : '_self';
-                                            ?>
-                                            <a class="btn btn-success" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-                                        <?php endif; ?>
-
-                                    <?php endwhile; ?>
-
-                                <?php endif; ?>
-
-                            </div>
 
                                 </div>
                             </div>
