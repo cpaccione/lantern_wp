@@ -45,6 +45,8 @@ do_action( 'woocommerce_before_main_content' );
 	?>
 </header>
 
+<div class="lantern-store">
+
     <?php
     if ( woocommerce_product_loop() ) {
 
@@ -101,6 +103,7 @@ do_action( 'woocommerce_before_main_content' );
      *
      * @hooked woocommerce_get_sidebar - 10
      */
-    //do_action( 'woocommerce_sidebar' ); ?>
+    do_action( 'woocommerce_sidebar' ); ?>
+
 
 <?php get_footer( 'shop' );

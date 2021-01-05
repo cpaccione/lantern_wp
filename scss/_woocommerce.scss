@@ -35,6 +35,20 @@
     padding: 1rem;
   }
 
+  .woocommerce-pagination {
+    margin-bottom: 2rem;
+  }
 }
+
+.lantern-store {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media(min-width: 768px) {
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
 
 
