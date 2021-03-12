@@ -108,7 +108,15 @@
 
                                 <?php if( get_field('ebook_price') ): ?>
                                 
-                                    <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('ebook_price'); ?></b> eBook</li>
+                                    <li><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp; <b><?php the_field('ebook_price'); ?></b> eBook 
+
+                                    <?php if(get_field('ebook_purchase_button') ): ?>
+                                        
+                                        <span><a style="font-size: 1rem; font-weight: bold; color: #008a00;" class="ebook-purchase-button" href="<?php the_field('ebook_purchase_button'); ?>">- Purchase eBook</a></span>
+
+                                    <?php endif; ?>
+
+                                    </li>
 
                                 <?php endif; ?>
 
