@@ -148,9 +148,9 @@ function register_acf_block_types() {
             'title'             => __('Book post type'),
             'description'       => __('The block displays the Lantern hero.'),
             'render_template'   => 'template-parts/blocks/books/books.php',
-            'enqueue_assets'    => function() {
-                wp_enqueue_style( 'book-post-type', get_template_directory_uri() . '/template-parts/blocks/books/books.css', array(), '1.2', 'all' );
-            },
+            // 'enqueue_assets'    => function() {
+            //     wp_enqueue_style( 'book-post-type', get_template_directory_uri() . '/template-parts/blocks/books/books.css', array(), '1.2', 'all' );
+            // },
             'category'          => 'common',
             'mode'              => 'edit',
             'post_types'        => array('page'),

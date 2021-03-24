@@ -33,10 +33,10 @@ $section_title = get_field('section_title');
 <div class="new-releases">
 
     <div class="section-title">
-        <h2><?php echo $section_title; ?></h2>
+        <h2 class="text-2xl md:text-3xl"><?php echo $section_title; ?></h2>
     </div>
 
-    <div class="book-container">
+    <div class="book-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 md:gap-y-12">
         <!-- <div class="row"> -->
 
                 <?php
@@ -63,12 +63,12 @@ $section_title = get_field('section_title');
 
                     <div class="book-col">
                         <a href="<?php the_permalink(); ?>">
-                            <div class="book-wrap">
+                            <div class="w-4/5 mx-auto">
                                 
                                 <?php
 
                                 if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail('large');
+                                    the_post_thumbnail('large', array('class' => 'border-solid border border-black'));
                                 }
 
                                 ?>
@@ -88,7 +88,7 @@ $section_title = get_field('section_title');
     </div>
     
 
-    <style>
+    <!-- <style>
         .book-container {
             display: grid;
             grid-template-columns: 1fr;
@@ -106,4 +106,4 @@ $section_title = get_field('section_title');
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-    </style>
+    </style> -->

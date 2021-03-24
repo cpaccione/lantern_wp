@@ -14,9 +14,9 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title uppercase">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="entry-title uppercase"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
@@ -30,7 +30,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="content">
+	<div class="content prose sm:prose-lg max-w-none">
 		<?php the_content(); ?>
 	</div>
 
