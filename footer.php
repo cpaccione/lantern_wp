@@ -33,6 +33,34 @@
 
 							<div class="col">
 								<?php dynamic_sidebar('footer-5'); ?>
+
+								<?php if(have_rows('social_media_repeater', 'options') ): ?>
+
+									<ul class="social-media">
+
+										<?php while(have_rows('social_media_repeater', 'options') ) : the_row();
+										
+											$icon = get_sub_field('social_media_icon', 'options' );
+											$link = get_sub_field('link', 'options' );
+										
+										?>
+
+											<li>
+												<a href="https://www.goodreads.com/user/show/1027933-lantern-publishing-media" target="_blank">
+													<span class="fa-stack" style="color: #ffffff;">
+														<i class="fas fa-circle fa-stack-2x"></i>
+														<i style="color: #0D88C1;" class="fab fa-goodreads-g fa-stack-1x"></i>
+													</span>
+												</a>
+											</li>
+
+										
+										<?php endwhile; ?>
+
+									</ul>
+
+								<?php endif; ?>
+
 								<ul class="social-media">
 									<li>
 										<a href="https://www.goodreads.com/user/show/1027933-lantern-publishing-media" target="_blank">
@@ -67,7 +95,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="https://www.youtube.com/user/Lanternmedia"" target="_blank">
+										<a href="https://www.youtube.com/user/Lanternmedia" target="_blank">
 											<span class="fa-stack" style="color: #ffffff;">
 												<i class="fas fa-circle fa-stack-2x"></i>
 												<i style="color: #0D88C1;" class="fab fa-youtube fa-stack-1x"></i>
