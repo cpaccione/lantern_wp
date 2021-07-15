@@ -41,68 +41,25 @@
 										<?php while(have_rows('social_media_repeater', 'options') ) : the_row();
 										
 											$icon = get_sub_field('social_media_icon', 'options' );
-											$link = get_sub_field('link', 'options' );
+											$link = get_sub_field('social_media_link', 'options' );
+											//var_dump($link);
 										
 										?>
 
 											<li>
-												<a href="https://www.goodreads.com/user/show/1027933-lantern-publishing-media" target="_blank">
+												<a href="<?php echo $link['url']; ?>" target="_blank" rel="noopener">
 													<span class="fa-stack" style="color: #ffffff;">
 														<i class="fas fa-circle fa-stack-2x"></i>
-														<i style="color: #0D88C1;" class="fab fa-goodreads-g fa-stack-1x"></i>
+														<i style="color: #0D88C1;" class="fab fa-stack-1x text-lg <?php echo $icon; ?>"></i>
 													</span>
 												</a>
 											</li>
 
-										
 										<?php endwhile; ?>
 
 									</ul>
 
 								<?php endif; ?>
-
-								<ul class="social-media">
-									<li>
-										<a href="https://www.goodreads.com/user/show/1027933-lantern-publishing-media" target="_blank">
-											<span class="fa-stack" style="color: #ffffff;">
-												<i class="fas fa-circle fa-stack-2x"></i>
-												<i style="color: #0D88C1;" class="fab fa-goodreads-g fa-stack-1x"></i>
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="https://www.facebook.com/lanternpm/" target="_blank">
-											<span class="fa-stack" style="color: #ffffff;">
-												<i class="fas fa-circle fa-stack-2x"></i>
-												<i style="color: #0D88C1;" class="fab fa-facebook-f fa-stack-1x"></i>
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="https://www.instagram.com/lanternpm/" target="_blank">
-											<span class="fa-stack" style="color: #ffffff;">
-												<i class="fas fa-circle fa-stack-2x"></i>
-												<i style="color: #0D88C1;" class="fab fa-instagram fa-stack-1x"></i>
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="https://twitter.com/lanternpm" target="_blank">
-											<span class="fa-stack" style="color: #ffffff;">
-												<i class="fas fa-circle fa-stack-2x"></i>
-												<i style="color: #0D88C1;" class="fab fa-twitter fa-stack-1x"></i>
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="https://www.youtube.com/user/Lanternmedia" target="_blank">
-											<span class="fa-stack" style="color: #ffffff;">
-												<i class="fas fa-circle fa-stack-2x"></i>
-												<i style="color: #0D88C1;" class="fab fa-youtube fa-stack-1x"></i>
-											</span>
-										</a>
-									</li>
-								</ul>
 							</div>
 
 						</div>

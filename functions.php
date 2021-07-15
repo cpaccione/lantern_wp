@@ -215,6 +215,23 @@ if( function_exists('acf_register_block_type') ) {
 
 
 /**
+ * Add ACF Theme Options
+*/
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title'	=> 'Lantern General Settings',
+		'menu_title'	=> 'Lantern Settings',
+		'menu_slug' 	=> 'lantern-general-settings',
+		'capability' 	=> 'edit_posts',
+		'redirect' 		=> false
+	));
+}
+
+
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
